@@ -38,10 +38,10 @@ export default [
     title: 'Lugar 1',
     description: 'curitiba',
     rate: 5,
-    address: '',
+    address: 'asdf',
     city: 'curitiba',
-    state: '',
-    type: '',
+    state: 'asdgsadf',
+    type: 'gasdfasdf',
   },
   {
     id: 6,
