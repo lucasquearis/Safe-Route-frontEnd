@@ -1,18 +1,19 @@
-import dataMock from "../../services/mock/cardMock";
+import { useContext } from "react";
 import CardPlace from "../../components/CardPlace";
-import Header from "../../components/Header";
+import Hero from "./Hero";
+import PlaceContext from "../../context/PlaceContext";
 
 const Main = () => {
+  const { placeCardMock } = useContext(PlaceContext);
   return (
     <main>
-      <Header />
-      <div>Hero</div>
-      <div>Filters</div>
-      <div>
-        {dataMock.map((place) => (
+      <Hero />
+      <section>Filters</section>
+      <section>
+        {placeCardMock.map((place) => (
           <CardPlace place={place} />
         ))}
-      </div>
+      </section>
     </main>
   );
 };

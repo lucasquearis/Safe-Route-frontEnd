@@ -1,7 +1,11 @@
 const Footer = () => {
-  return(
-    <>Eu sou a Footer</>
-  )
+  return (
+    <footer>
+      <p>Trybe infos projetos</p>
+      <p>Grupo, Nomes Turma</p>
+      <p>Contatos!!</p>
+    </footer>
+  );
 };
 
 export default Footer;
