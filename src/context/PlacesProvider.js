@@ -18,6 +18,7 @@ const PlacesProvider = ({ children }) => {
   const context ={
     renderPlaceCardMock,
     setRenderPlaceCardMock,
+    placeCardMock,
   };
   return(
     <PlaceContext.Provider value={ context }>
