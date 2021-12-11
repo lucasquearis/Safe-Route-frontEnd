@@ -1,6 +1,13 @@
+
+
 const Main = () => {
   return(
-    <>Eu sou a Main</>
+    <main>
+      <div>Header</div>
+      <div>Hero</div>
+      <div>Filters</div>
+      <div>Places List</div>
+    </main>
   )
 };
 

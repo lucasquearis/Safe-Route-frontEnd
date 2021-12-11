@@ -1,6 +1,11 @@
+import Main from './pages/Main';
+
 const App = () => {
   return (
-    <h1>Safe Covid</h1>
+    <div>
+      <Main />
+      <footer>Eu sou o Footer</footer>
+    </div>
   );
 }
 
