@@ -3,22 +3,36 @@ import cardMock from "../services/mock/cardMock";
 import { useEffect, useState } from "react";
 
 const PlacesProvider = ({ children }) => {
-  const [placeCardMock, setplaceCardMock] = useState([]);
-  const [renderPlaceCardMock, setRenderPlaceCardMock] = useState(placeCardMock);
+  const [basePlaces, setBasePlaces] = useState([]);
+  const [renderBasePlaces, setRenderBasePlaces] = useState(basePlaces);
+  const [cityFilter, setCityFilter] = useState('');
+  const [inputFilter, setInputFilter] = useState('');
+
+  const handleInputFilter = (value) => {
+    const inputFiltered = basePlaces.filter((place) =>
+      place.description.toLowerCase().includes(value.toLowerCase())
+    );
+    setRenderBasePlaces(inputFiltered);
+  };
 
   useEffect(() => {
-    setplaceCardMock(cardMock);
-    console.log('rodei')
+    handleInputFilter(inputFilter);
+  }, [cityFilter, inputFilter]);
+
+  useEffect(() => {
+    setBasePlaces(cardMock);
   }, []);
 
   useEffect(() => {
-    setRenderPlaceCardMock(placeCardMock);
-  }, [placeCardMock]);
+    setRenderBasePlaces(basePlaces);
+  }, [basePlaces]);
 
   const context ={
-    renderPlaceCardMock,
-    setRenderPlaceCardMock,
-    placeCardMock,
+    renderBasePlaces,
+    setRenderBasePlaces,
+    basePlaces,
+    setCityFilter,
+    setInputFilter,
   };
   return(
     <PlaceContext.Provider value={ context }>

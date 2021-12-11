@@ -5,13 +5,13 @@ import PlaceContext from "../../context/PlaceContext";
 import Filters from "../../components/Filters";
 
 const Main = () => {
-  const { renderPlaceCardMock } = useContext(PlaceContext);
+  const { renderBasePlaces } = useContext(PlaceContext);
   return (
     <main>
       <Hero />
       <Filters />
       <section>
-        {renderPlaceCardMock.map((place, index) => (
+        {renderBasePlaces.map((place, index) => (
           <CardPlace place={place} key={index} />
         ))}
       </section>
