@@ -4,13 +4,20 @@ import { useEffect, useState } from "react";
 
 const PlacesProvider = ({ children }) => {
   const [placeCardMock, setplaceCardMock] = useState([]);
+  const [renderPlaceCardMock, setRenderPlaceCardMock] = useState(placeCardMock);
 
   useEffect(() => {
     setplaceCardMock(cardMock);
+    console.log('rodei')
   }, []);
 
+  useEffect(() => {
+    setRenderPlaceCardMock(placeCardMock);
+  }, [placeCardMock]);
+
   const context ={
-    placeCardMock,
+    renderPlaceCardMock,
+    setRenderPlaceCardMock,
   };
   return(
     <PlaceContext.Provider value={ context }>
