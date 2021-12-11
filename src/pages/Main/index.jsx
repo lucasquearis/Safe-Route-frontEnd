@@ -1,10 +1,11 @@
 import dataMock from "../../services/mock/cardMock";
 import CardPlace from "../../components/CardPlace";
+import Header from "../../components/Header";
 
 const Main = () => {
   return (
     <main>
-      <div>Header</div>
+      <Header />
       <div>Hero</div>
       <div>Filters</div>
       <div>

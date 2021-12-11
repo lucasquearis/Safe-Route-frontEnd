@@ -1,7 +1,5 @@
 const SearchBar = () => {
-  return(
-    <>Eu sou a SearchBar</>
-  )
+  return <input />;
 };
 
 export default SearchBar;

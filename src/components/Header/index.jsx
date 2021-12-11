@@ -1,7 +1,15 @@
+import SearchBar from "./SearchBar";
+
 const Header = () => {
-  return(
-    <>Eu sou a Header</>
-  )
+  return (
+    <div>
+      <div>
+        <img alt="Logo" src="" />
+      </div>
+      <SearchBar />
+      <div>Sign in</div>
+    </div>
+  );
 };
 
 export default Header;
