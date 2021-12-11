@@ -12,7 +12,8 @@ const PlacesProvider = ({ children }) => {
     const inputFiltered = basePlaces.filter((place) =>
       place.description.toLowerCase().includes(value.toLowerCase())
     );
-    setRenderBasePlaces(inputFiltered);
+    const cityFiltered = inputFiltered.filter((place) => place.city === cityFilter.toLowerCase());
+    setRenderBasePlaces(cityFiltered);
   };
 
   useEffect(() => {
