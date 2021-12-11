@@ -1,13 +1,13 @@
-const CardPlace = () => {
+const CardPlace = ({ place: { title, rate, image, description } }) => {
   return(
     <div className="body-card">
       <div className="place-image">
-        <img alt="Foto do local" src="" />
+        <img alt="Foto do local" src={ image } />
       </div>
       <div className="place-infos">
-        <p>Título</p>
-        <p>Descrição</p>
-        <p>Avaliação</p>
+        <p>{ title }</p>
+        <p>{ description }</p>
+        <p>{ rate }</p>
       </div>
     </div>
   )
