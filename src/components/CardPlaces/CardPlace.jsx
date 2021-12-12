@@ -14,7 +14,7 @@ const CardPlace = ({
         <p className="card-text">{description}</p>
         <p>{city}</p>
         <p>{type}</p>
-        <a href="#" class="btn btn-primary">
+        <a href="#" className="btn btn-primary">
           Visitar
         </a>
         {/* <p>{address}</p> */}
