@@ -17,7 +17,7 @@ export default [
     description: 'adiuhasiubhasoidfasuhriuagsdiugasidnfanlaksmlgasldf',
     rate: 4,
     address: '',
-    city: '',
+    city: 'curitiba',
     state: '',
     type: 'bar',
   },

@@ -7,7 +7,7 @@ const PlacesProvider = ({ children }) => {
   const [renderBasePlaces, setRenderBasePlaces] = useState(basePlaces);
   const [inputsFilter, setInputsFilter] = useState("");
   const [cityFilter, setCityFilter] = useState({ type: "city", filter: [] });
-  const [typeFilter, setTypeFilter] = useState("");
+  const [typeFilter, setTypeFilter] = useState({ type: "type", filter: [] });
   const [rateFilter, setRateFilter] = useState("");
 
   const searchBarFilter = () => {
@@ -17,25 +17,38 @@ const PlacesProvider = ({ children }) => {
   };
 
   const filterByCities = (places) => {
-    //  Lembrar do map com lowercase no array de cidades e demais itens 
     return places.filter((place) => {
       if (cityFilter.filter.length === 0) return true;
-      return cityFilter.filter.some(((filterCity) => filterCity.toLowerCase() === place.city.toLowerCase()));
+
+      return cityFilter.filter.some(
+        (filterCity) => filterCity.toLowerCase() === place.city.toLowerCase()
+      );
     });
-  }
+  };
+
+  const filterByTypes = (places) => {
+    return places.filter((place) => {
+      if (typeFilter.filter.length === 0) return true;
+
+      return typeFilter.filter.some(
+        (filterType) => filterType.toLowerCase() === place.type.toLowerCase()
+      );
+    });
+  };
 
   const handleOptionsFilters = () => {
     let filteredPlaces = [];
     filteredPlaces = searchBarFilter();
 
-    filteredPlaces = filterByCities(filteredPlaces)
+    filteredPlaces = filterByCities(filteredPlaces);
+    filteredPlaces = filterByTypes(filteredPlaces);
 
     setRenderBasePlaces(filteredPlaces);
   };
 
   useEffect(() => {
     handleOptionsFilters();
-  }, [cityFilter, inputsFilter]);
+  }, [cityFilter, inputsFilter, typeFilter]);
 
   useEffect(() => {
     setBasePlaces(cardMock);
@@ -54,7 +67,7 @@ const PlacesProvider = ({ children }) => {
     setTypeFilter,
     setRateFilter,
     handleOptionsFilters,
-    setInputsFilter
+    setInputsFilter,
   };
 
   return (
