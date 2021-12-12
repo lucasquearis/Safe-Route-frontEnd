@@ -1,19 +1,24 @@
+import react from "react";
+import imageCard from "../../img/cardImg.jpg";
+
 const CardPlace = ({
-  place: { title, rate, image, description, address, city, state, type },
+  place: { title, rate, description, city, type /* address, image, state  */ },
 }) => {
   return (
-    <div className="body-card">
-      <div className="place-image">
-        <img alt="Foto do local" src={image} />
-      </div>
-      <div className="place-infos">
+    <div className="card">
+      <img className="card-img-top" alt="Foto do local" src={imageCard} />
+
+      <div className="card-body">
+        <h5 className="card-title">{title}</h5>
         <p>{rate}</p>
-        <p>{title}</p>
-        <p>{description}</p>
-        <p>{address}</p>
+        <p className="card-text">{description}</p>
         <p>{city}</p>
-        <p>{state}</p>
         <p>{type}</p>
+        <a href="#" class="btn btn-primary">
+          Visitar
+        </a>
+        {/* <p>{address}</p> */}
+        {/* <p>{state}</p> */}
       </div>
     </div>
   );

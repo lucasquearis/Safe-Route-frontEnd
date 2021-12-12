@@ -21,3 +21,18 @@ header {
   background-color: chartreuse;
   height: 10vh;
 }
+
+/*------------------------ Inicio cards places list -------------- */
+.places {
+  background-color: rgb(25, 0, 255);
+}
+
+.list-places {
+  padding: 20px;
+}
+
+/* .card-place {
+  padding: 20px;
+  margin: 10px;
+
+} */
