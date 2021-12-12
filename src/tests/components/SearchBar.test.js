@@ -10,7 +10,7 @@ describe('Testa componente SearchBar', () => {
     const inputText = screen.getByPlaceholderText(/procurar.../i);
     expect(inputText).toBeInTheDocument();
   });
-  it('Verifica se ao digitar algo no SearchBar, response ao resultado da pesquisa', () => {
+  it('Verifica se ao digitar algo no SearchBar, responde ao resultado da pesquisa', () => {
     render(<App />);
     const inputText = screen.getByPlaceholderText(/procurar.../i);
     const oscarNiemayer = screen.getByText(/Oscar Niemayer/i);

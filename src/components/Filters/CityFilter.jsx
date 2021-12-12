@@ -4,7 +4,7 @@ import PlaceContext from "../../context/PlaceContext";
 const CityFilter = () => {
   const {
     setCityFilter,
-    cityFilter: { filter },
+    // cityFilter: { filter },
   } = useContext(PlaceContext);
 
   const hadleFilter = (value) => {
@@ -14,7 +14,6 @@ const CityFilter = () => {
 
     return setCityFilter({ type: "city", filter: [value] });
     // return setCityFilter({ type: "city", filter: [...filter, value] }); --> Usar quando for fazer logica de array de filtros acumulativa
-  
   };
 
   return (
