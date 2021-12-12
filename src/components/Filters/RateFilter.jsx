@@ -12,7 +12,7 @@ const RateFilter = () => {
           Avaliações
         </label>
       </div>
-      selected
+      
       <select
         className="custom-select "
         id="rate"
