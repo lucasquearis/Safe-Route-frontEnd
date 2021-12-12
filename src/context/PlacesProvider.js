@@ -38,9 +38,12 @@ const PlacesProvider = ({ children }) => {
 
   const filterByRate = (places) => {
     return places.filter((place) => {
-      if (rateFilter.filter === 'all') return true;
+      if (rateFilter.filter === "all") return true;
 
-      return place.rate >= Number(rateFilter.filter) && place.rate <= Number(rateFilter.filter) + 1
+      return (
+        place.rate >= Number(rateFilter.filter) &&
+        place.rate <= Number(rateFilter.filter) + 1
+      );
     });
   };
 

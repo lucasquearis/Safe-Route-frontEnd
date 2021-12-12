@@ -5,7 +5,11 @@ const RateFilter = () => {
   const { setRateFilter } = useContext(PlaceContext);
 
   return (
-    <select onChange={({ target: { value } }) => setRateFilter({type: "rate", filter: value})}>
+    <select
+      onChange={({ target: { value } }) =>
+        setRateFilter({ type: "rate", filter: value })
+      }
+    >
       <option value="all">Todas</option>
       <option value="4">Notas entre 4 e 5</option>
       <option value="3">Notas entre 3 e 4</option>

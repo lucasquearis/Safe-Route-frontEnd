@@ -7,7 +7,7 @@ export default [
     rate: 5,
     address: 'R. Mal. Hermes, 999',
     city: 'curitiba',
-    state: 'paraná',
+    state: 'PR',
     type: 'museu',
   },
   {
@@ -18,8 +18,8 @@ export default [
     rate: 4.7,
     address: 'Av. Dr. Heitor Penteado, 1671',
     city: 'campinas',
-    state: 'sao paulo',
-    type: 'parque',
+    state: 'SP',
+    type: 'alimentação',
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export default [
     rate: 3.6,
     address: 'Rua Porto Das Dunas, 2734',
     city: 'fortaleza',
-    state: 'ceara',
+    state: 'CE',
     type: 'alimentação',
   },
   {
@@ -40,8 +40,8 @@ export default [
     rate: 2.5,
     address: 'asdf',
     city: 'curitiba',
-    state: 'asdgsadf',
-    type: 'gasdfasdf',
+    state: 'AC',
+    type: 'alimentação',
   },
   {
     id: 6,
@@ -51,8 +51,8 @@ export default [
     rate: 1.5,
     address: '',
     city: 'campinas',
-    state: '',
-    type: '',
+    state: 'SP',
+    type: 'Turismo',
   },
   {
     id: 7,
@@ -63,7 +63,7 @@ export default [
     address: '',
     city: 'campinas',
     state: '',
-    type: '',
+    type: 'Lazer',
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ export default [
     address: '',
     city: 'campinas',
     state: '',
-    type: '',
+    type: 'Transporte',
   },
   {
     id: 7,
@@ -85,7 +85,7 @@ export default [
     address: '',
     city: 'campinas',
     state: '',
-    type: '',
+    type: 'Alimentação',
   },
   {
     id: 7,
@@ -96,7 +96,7 @@ export default [
     address: '',
     city: 'campinas',
     state: '',
-    type: '',
+    type: 'Hospedagem',
   },
   {
     id: 7,
@@ -107,6 +107,6 @@ export default [
     address: '',
     city: 'campinas',
     state: '',
-    type: '',
+    type: 'Bar',
   },
 ];
