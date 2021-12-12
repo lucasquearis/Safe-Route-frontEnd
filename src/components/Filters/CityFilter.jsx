@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext } from "react";
 import PlaceContext from "../../context/PlaceContext";
 
@@ -19,7 +20,7 @@ const CityFilter = () => {
   return (
     <div className="input-group mb-1 filter-option">
       <div className="input-group-prepend">
-        <label className="input-group-text" for="cities">
+        <label className="input-group-text" htmlFor="cities">
           Cidades
         </label>
       </div>

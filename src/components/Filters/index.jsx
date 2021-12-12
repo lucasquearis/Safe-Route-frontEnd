@@ -1,3 +1,4 @@
+import React from "react";
 import CityFilter from "./CityFilter";
 import RateFilter from "./RateFilter";
 import TypeFilter from "./TypeFilter";

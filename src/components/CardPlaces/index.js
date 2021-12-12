@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext } from "react";
 import CardPlace from "../../components/CardPlaces/CardPlace";
 import PlaceContext from "../../context/PlaceContext";
