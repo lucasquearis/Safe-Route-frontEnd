@@ -4,10 +4,12 @@ import TypeFilter from "./TypeFilter";
 
 const Filters = () => {
   return (
-    <section className="filters d-flex align-items-center  justify-content-center">
-      <CityFilter />
-      <RateFilter />
-      <TypeFilter />
+    <section className="filters">
+      <div className="d-flex align-items-center justify-content-center">
+        <CityFilter />
+        <RateFilter />
+        <TypeFilter />
+      </div>
     </section>
   );
 };
