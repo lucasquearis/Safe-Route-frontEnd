@@ -3,9 +3,45 @@
 background-color: rgb(206, 206, 206)
 
 */
+/* ------------------Geral -------------------- */
+
+/* 
+/* ------------------Inicio header -------------------- */
 
 header {
-  background-color: rgb(206, 206, 206)
-  
+  background-color: rgb(206, 206, 206);
+  height: 10vh;
+  max-height: 80px;
 }
 
+/*------------------------ Inicio hero -------------- */
+.hero {
+  background-image: url(./img/hero-unsplash\ 1.png);
+}
+
+/*------------------------ Inicio filtros -------------- */
+.filters {
+  justify-content: flex-end;
+  padding: 0 10vw;
+  /* background-color: chartreuse; */
+}
+
+.filter-option {
+  margin: 5px;
+}
+
+/*------------------------ Inicio places -------------- */
+.places {
+  justify-content: center;
+}
+
+.card-place {
+  margin: 10px;
+  width: 12vw;
+  width: 20vw;
+}
+
+/*------------------------ Inicio footer -------------- */
+footer {
+  background-color: rgb(22, 22, 22);
+}
