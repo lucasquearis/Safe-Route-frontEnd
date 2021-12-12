@@ -3,6 +3,11 @@
 background-color: rgb(206, 206, 206)
 
 */
+/* ------------------Geral -------------------- */
+
+/* 
+/* ------------------Inicio header -------------------- */
+
 header {
   background-color: rgb(206, 206, 206);
   height: 10vh;
@@ -16,13 +21,18 @@ header {
 
 /*------------------------ Inicio filtros -------------- */
 .filters {
-  background-color: chartreuse;
-  height: 6vh;
+  justify-content: flex-end;
+  padding: 0 10vw;
+  /* background-color: chartreuse; */
+}
+
+.filter-option {
+  margin: 5px;
 }
 
 /*------------------------ Inicio places -------------- */
 .places {
-  background-color: rgb(25, 0, 255);
+  /* background-color: rgb(25, 0, 255); */
   justify-content: center;
 }
 
