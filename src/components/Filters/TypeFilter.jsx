@@ -16,7 +16,7 @@ const TypeFilter = () => {
   return (
     <div className="input-group mb-1 filter-option">
       <div className="input-group-prepend">
-        <label className="input-group-text" for="type">
+        <label className="input-group-text" htmlFor="type">
           Categorias
         </label>
       </div>
@@ -26,7 +26,7 @@ const TypeFilter = () => {
         id="type"
         onChange={({ target: { value } }) => handleFilter(value)}
       >
-        <option value="">Todas</option>
+        <option selected value="">Todas</option>
         <option value="hospedagem">Hospedagem</option>
         <option value="alimentacao">Alimentação</option>
         <option value="bar">Bar</option>

@@ -32,7 +32,6 @@ header {
 
 /*------------------------ Inicio places -------------- */
 .places {
-  /* background-color: rgb(25, 0, 255); */
   justify-content: center;
 }
 
@@ -41,3 +40,5 @@ header {
   width: 12vw;
   width: 20vw;
 }
+
+/*------------------------ Inicio footer -------------- */

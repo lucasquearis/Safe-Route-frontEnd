@@ -26,13 +26,11 @@ const CityFilter = () => {
       </div>
 
       <select
-        className="custom-select "
+        className="custom-select"
         id="cities"
         onChange={({ target: { value } }) => hadleFilter(value)}
       >
-        <option selected value="">
-          Todas
-        </option>
+        <option selected value="">Todas</option>
         <option value="curitiba">Curitiba</option>
         <option value="campinas">Campinas</option>
         <option value="ceara">Ceara</option>
