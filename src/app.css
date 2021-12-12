@@ -3,9 +3,31 @@
 background-color: rgb(206, 206, 206)
 
 */
-
 header {
-  background-color: rgb(206, 206, 206)
-  
+  background-color: rgb(206, 206, 206);
+  height: 10vh;
+  max-height: 80px;
 }
 
+/*------------------------ Inicio hero -------------- */
+.hero {
+  background-image: url(./img/hero-unsplash\ 1.png);
+}
+
+/*------------------------ Inicio filtros -------------- */
+.filters {
+  background-color: chartreuse;
+  height: 6vh;
+}
+
+/*------------------------ Inicio places -------------- */
+.places {
+  background-color: rgb(25, 0, 255);
+  justify-content: center;
+}
+
+.card-place {
+  margin: 10px;
+  width: 12vw;
+  width: 20vw;
+}
