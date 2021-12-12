@@ -9,10 +9,8 @@ const App = () => {
   return (
     <PlacesProvider>
       <Header />
-      <div className="main-page">
-        <Main />
-        <Footer />
-      </div>
+      <Main />
+      <Footer />
     </PlacesProvider>
   );
 };
