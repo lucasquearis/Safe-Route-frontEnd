@@ -9,7 +9,7 @@ background-color: rgb(206, 206, 206)
 /* ------------------Inicio header -------------------- */
 
 header {
-  background-color: rgb(206, 206, 206);
+  /* background-color: rgb(206, 206, 206); */
   height: 10vh;
   max-height: 80px;
 }
@@ -32,8 +32,14 @@ header {
 }
 
 /*------------------------ Inicio hero -------------- */
+.hero-container {
+  margin-top: 2vw;
+}
+
 .hero {
   background-image: url(./img/hero-unsplash\ 1.png);
+  height: 40vh;
+  width: 80vw;
 }
 
 /*------------------------ Inicio filtros -------------- */

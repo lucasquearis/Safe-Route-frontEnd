@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="container hero-container">
+    <div className="d-flex justify-content-center hero-container">
       <div className="jumbotron hero">
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum ad,
