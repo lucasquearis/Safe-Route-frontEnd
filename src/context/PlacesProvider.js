@@ -11,6 +11,7 @@ const PlacesProvider = ({ children }) => {
   const [inputFilter, setInputFilter] = useState('');
 
   const handleInputFilter = (value) => {
+    // PRECISAMOS REFATORAR ISSO!!
     const inputFiltered = basePlaces.filter((place) =>
       place.description.toLowerCase().includes(value.toLowerCase())
     );
@@ -18,7 +19,15 @@ const PlacesProvider = ({ children }) => {
       if(cityFilter === '') return true
       return place.city === cityFilter.toLowerCase()
     });
-    setRenderBasePlaces(cityFiltered);
+    const typeFiltered = cityFiltered.filter((place) => {
+      if(cityFilter === '') return true
+      return place.type === typeFilter.toLowerCase()
+    });
+    const rateFiltered = typeFiltered.filter((place) => {
+      if(cityFilter === '') return true
+      return place.rate == rateFilter
+    });
+    setRenderBasePlaces(rateFiltered);
   };
 
   useEffect(() => {

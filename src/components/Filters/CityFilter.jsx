@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import PlaceContext from "../../context/PlaceContext";
 
 const CityFilter = () => {
