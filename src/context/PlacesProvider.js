@@ -8,7 +8,7 @@ const PlacesProvider = ({ children }) => {
   const [inputsFilter, setInputsFilter] = useState("");
   const [cityFilter, setCityFilter] = useState({ type: "city", filter: [] });
   const [typeFilter, setTypeFilter] = useState({ type: "type", filter: [] });
-  const [rateFilter, setRateFilter] = useState("");
+  const [rateFilter, setRateFilter] = useState({ type: "rate", filter: 0 });
 
   const searchBarFilter = () => {
     return basePlaces.filter((place) =>
@@ -36,19 +36,28 @@ const PlacesProvider = ({ children }) => {
     });
   };
 
+  const filterByRate = (places) => {
+    return places.filter((place) => {
+      if (rateFilter.filter === 'all') return true;
+
+      return place.rate >= Number(rateFilter.filter) && place.rate <= Number(rateFilter.filter) + 1
+    });
+  };
+
   const handleOptionsFilters = () => {
     let filteredPlaces = [];
     filteredPlaces = searchBarFilter();
 
     filteredPlaces = filterByCities(filteredPlaces);
     filteredPlaces = filterByTypes(filteredPlaces);
+    filteredPlaces = filterByRate(filteredPlaces);
 
     setRenderBasePlaces(filteredPlaces);
   };
 
   useEffect(() => {
     handleOptionsFilters();
-  }, [cityFilter, inputsFilter, typeFilter]);
+  }, [cityFilter, inputsFilter, typeFilter, rateFilter]);
 
   useEffect(() => {
     setBasePlaces(cardMock);
