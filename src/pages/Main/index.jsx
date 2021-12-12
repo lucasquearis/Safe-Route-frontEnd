@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import CardPlace from "../../components/CardPlace";
 import Hero from "./Hero";
 import PlaceContext from "../../context/PlaceContext";
 import Filters from "../../components/Filters";
+import CardPlaces from "../../components/CardPlaces";
 
 const Main = () => {
   const { renderBasePlaces } = useContext(PlaceContext);
@@ -10,11 +10,7 @@ const Main = () => {
     <main>
       <Hero />
       <Filters />
-      <section>
-        {renderBasePlaces.map((place, index) => (
-          <CardPlace place={place} key={index} />
-        ))}
-      </section>
+      <CardPlaces />
     </main>
   );
 };
