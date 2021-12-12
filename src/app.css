@@ -5,7 +5,19 @@ background-color: rgb(206, 206, 206)
 */
 
 header {
-  background-color: rgb(206, 206, 206)
-  
+  background-color: rgb(206, 206, 206);
+  height: 50vh;
+  max-height: 50px;
 }
 
+.hero {
+  background-color: blueviolet;
+  background-image: url(./img/hero-unsplash\ 1.png);
+  height: 40vh;
+}
+
+/*------------------------ Inicio filtros -------------- */
+.filters {
+  background-color: chartreuse;
+  height: 10vh;
+}

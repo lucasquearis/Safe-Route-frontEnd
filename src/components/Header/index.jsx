@@ -4,9 +4,11 @@ const Header = () => {
   return (
     <header className="d-flex justify-content-around">
 
-      <div><img alt="Logo" src=""/></div>
+      <img src='../../public/img/tripLogo.svg' alt="logo" />
+
       <SearchBar />
-      <div>Sign in</div>
+
+      <button className="btn btn-dark">Sign in</button>
 
     </header>
   );

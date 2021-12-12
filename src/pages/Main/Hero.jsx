@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div>
+    <div className="hero">
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est corrupti
         dicta facere, ipsa fuga esse in quibusdam rerum tempora at obcaecati
