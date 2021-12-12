@@ -2,13 +2,13 @@ import SearchBar from "./SearchBar";
 
 const Header = () => {
   return (
-    <div>
-      <div>
-        <img alt="Logo" src="" />
-      </div>
+    <header className="d-flex justify-content-around">
+
+      <div><img alt="Logo" src=""/></div>
       <SearchBar />
       <div>Sign in</div>
-    </div>
+
+    </header>
   );
 };
 
