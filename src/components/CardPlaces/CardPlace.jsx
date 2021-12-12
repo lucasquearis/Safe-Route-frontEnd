@@ -5,7 +5,7 @@ const CardPlace = ({
   place: { title, rate, description, city, type /* address, image, state  */ },
 }) => {
   return (
-    <div className="card">
+    <div className="p-2 card card-place">
       <img className="card-img-top" alt="Foto do local" src={imageCard} />
 
       <div className="card-body">

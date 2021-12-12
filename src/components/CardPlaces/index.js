@@ -7,7 +7,7 @@ const CardPlaces = () => {
   return (
     <section className="places">
       <div className="d-flex justify-content-center">
-        <div class="list-places d-flex justify-content-around">
+        <div className="list-places d-flex flex-wrap justify-content-center">
           {renderBasePlaces.map((place, index) => (
             <CardPlace place={place} key={index} />
           ))}

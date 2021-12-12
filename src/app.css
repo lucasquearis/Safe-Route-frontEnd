@@ -3,7 +3,6 @@
 background-color: rgb(206, 206, 206)
 
 */
-
 header {
   background-color: rgb(206, 206, 206);
   height: 50vh;
@@ -13,26 +12,29 @@ header {
 .hero {
   background-color: blueviolet;
   background-image: url(./img/hero-unsplash\ 1.png);
-  height: 40vh;
+  height: 30vh;
 }
 
 /*------------------------ Inicio filtros -------------- */
 .filters {
   background-color: chartreuse;
-  height: 10vh;
+  height: 6vh;
 }
 
-/*------------------------ Inicio cards places list -------------- */
+/*------------------------ Inicio places -------------- */
 .places {
   background-color: rgb(25, 0, 255);
+  justify-content: center;
 }
 
 .list-places {
   padding: 20px;
 }
 
-/* .card-place {
-  padding: 20px;
+.card-place {
+  /* padding: 20px; */
   margin: 10px;
+  width: 12vw;
+  width: 20vw;
 
-} */
+}
