@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from 'prop-types';
 import PlaceContext from "./PlaceContext";
 import cardMock from "../services/mock/cardMock";
 import { useEffect, useState } from "react";
@@ -86,5 +88,9 @@ const PlacesProvider = ({ children }) => {
     <PlaceContext.Provider value={context}>{children}</PlaceContext.Provider>
   );
 };
+
+PlacesProvider.propTypes = {
+  children: PropTypes.element.isRequired,
+}
 
 export default PlacesProvider;

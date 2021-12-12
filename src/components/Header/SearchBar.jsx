@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import PlaceContext from "../../context/PlaceContext";
 const SearchBar = () => {
   const { setInputsFilter } = useContext(PlaceContext);
