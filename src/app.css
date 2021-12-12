@@ -5,14 +5,13 @@ background-color: rgb(206, 206, 206)
 */
 header {
   background-color: rgb(206, 206, 206);
-  height: 50vh;
-  max-height: 50px;
+  height: 10vh;
+  max-height: 80px;
 }
 
+/*------------------------ Inicio hero -------------- */
 .hero {
-  background-color: blueviolet;
   background-image: url(./img/hero-unsplash\ 1.png);
-  height: 30vh;
 }
 
 /*------------------------ Inicio filtros -------------- */
@@ -27,14 +26,8 @@ header {
   justify-content: center;
 }
 
-.list-places {
-  padding: 20px;
-}
-
 .card-place {
-  /* padding: 20px; */
   margin: 10px;
   width: 12vw;
   width: 20vw;
-
 }
