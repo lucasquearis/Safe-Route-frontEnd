@@ -19,19 +19,17 @@ const CityFilter = () => {
   return (
     <div className="input-group mb-1 filter-option">
       <div className="input-group-prepend">
-        <label className="input-group-text" for="cities">
+        <label className="input-group-text" htmlFor="cities">
           Cidades
         </label>
       </div>
 
       <select
-        className="custom-select "
+        className="custom-select"
         id="cities"
         onChange={({ target: { value } }) => hadleFilter(value)}
       >
-        <option selected value="">
-          Todas
-        </option>
+        <option selected value="">Todas</option>
         <option value="curitiba">Curitiba</option>
         <option value="campinas">Campinas</option>
         <option value="ceara">Ceara</option>
