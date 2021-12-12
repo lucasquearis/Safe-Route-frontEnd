@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import PlaceContext from "../../context/PlaceContext";
 const SearchBar = () => {
-  const { setInputFilter } = useContext(PlaceContext);
+  const { setInputsFilter } = useContext(PlaceContext);
 
   return (
     <input
       type="text"
       placeholder="Procurar..."
-      onChange={({ target }) => setInputFilter(target.value)}
+      onChange={({ target }) => setInputsFilter(target.value)}
       className="search-bar"
     />
   );

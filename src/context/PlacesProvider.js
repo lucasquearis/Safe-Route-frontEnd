@@ -5,34 +5,37 @@ import { useEffect, useState } from "react";
 const PlacesProvider = ({ children }) => {
   const [basePlaces, setBasePlaces] = useState([]);
   const [renderBasePlaces, setRenderBasePlaces] = useState(basePlaces);
-  const [cityFilter, setCityFilter] = useState('');
-  const [typeFilter, setTypeFilter] = useState('');
-  const [rateFilter, setRateFilter] = useState('');
-  const [inputFilter, setInputFilter] = useState('');
+  const [inputsFilter, setInputsFilter] = useState("");
+  const [cityFilter, setCityFilter] = useState({ type: "city", filter: [] });
+  const [typeFilter, setTypeFilter] = useState("");
+  const [rateFilter, setRateFilter] = useState("");
 
-  const handleInputFilter = (value) => {
-    // PRECISAMOS REFATORAR ISSO!!
-    const inputFiltered = basePlaces.filter((place) =>
-      place.description.toLowerCase().includes(value.toLowerCase())
+  const searchBarFilter = () => {
+    return basePlaces.filter((place) =>
+      place.description.toLowerCase().includes(inputsFilter.toLowerCase())
     );
-    const cityFiltered = inputFiltered.filter((place) => {
-      if(cityFilter === '') return true
-      return place.city === cityFilter.toLowerCase()
+  };
+
+  const filterByCities = (places) => {
+    //  Lembrar do map com lowercase no array de cidades e demais itens 
+    return places.filter((place) => {
+      if (cityFilter.filter.length === 0) return true;
+      return cityFilter.filter.some(((filterCity) => filterCity.toLowerCase() === place.city.toLowerCase()));
     });
-    const typeFiltered = cityFiltered.filter((place) => {
-      if(cityFilter === '') return true
-      return place.type === typeFilter.toLowerCase()
-    });
-    const rateFiltered = typeFiltered.filter((place) => {
-      if(cityFilter === '') return true
-      return place.rate == rateFilter
-    });
-    setRenderBasePlaces(rateFiltered);
+  }
+
+  const handleOptionsFilters = () => {
+    let filteredPlaces = [];
+    filteredPlaces = searchBarFilter();
+
+    filteredPlaces = filterByCities(filteredPlaces)
+
+    setRenderBasePlaces(filteredPlaces);
   };
 
   useEffect(() => {
-    handleInputFilter(inputFilter);
-  }, [cityFilter, inputFilter]);
+    handleOptionsFilters();
+  }, [cityFilter, inputsFilter]);
 
   useEffect(() => {
     setBasePlaces(cardMock);
@@ -42,20 +45,21 @@ const PlacesProvider = ({ children }) => {
     setRenderBasePlaces(basePlaces);
   }, [basePlaces]);
 
-  const context ={
+  const context = {
     renderBasePlaces,
     setRenderBasePlaces,
     basePlaces,
+    cityFilter,
     setCityFilter,
     setTypeFilter,
     setRateFilter,
-    setInputFilter,
+    handleOptionsFilters,
+    setInputsFilter
   };
-  return(
-    <PlaceContext.Provider value={ context }>
-      { children }
-    </PlaceContext.Provider>
-  )
+
+  return (
+    <PlaceContext.Provider value={context}>{children}</PlaceContext.Provider>
+  );
 };
 
 export default PlacesProvider;

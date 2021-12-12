@@ -6,6 +6,7 @@ const TypeFilter = () => {
 
   return (
     <select onChange={({ target: { value } }) => setTypeFilter(value)}>
+      <option value="">Todas</option>
       <option value="hospedagem">Hospedagem</option>
       <option value="alimentacao">Alimentação</option>
       <option value="bar">Bar</option>
