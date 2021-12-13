@@ -1,5 +1,5 @@
 import React from "react";
-import imgLogoFake from "../../img/tripLogo.svg";
+import imgLogoFake from "../../img/logoTrybe.png";
 import SearchBar from "./SearchBar";
 
 const Header = () => {

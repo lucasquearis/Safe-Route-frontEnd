@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import PlaceContext from "./PlaceContext";
-import getAllPartners from "../services/mock/cardMock";
-// import getAllPartners from "../services";
+// import getAllPartners from "../services/mock/cardMock";
+import getAllPartners from "../services";
 import { useEffect, useState } from "react";
 
 const PlacesProvider = ({ children }) => {

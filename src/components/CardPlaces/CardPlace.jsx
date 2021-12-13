@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
 import ReactStars from "react-rating-stars-component";
-import picture from "../../img/cardImg.jpg";
+// import picture from "../../img/cardImg.jpg";
 
 const CardPlace = ({
-  place: { /* picture,  */ title, address, city, state, type, avgRating },
+  place: { picture, title, address, city, state, type, avgRating },
 }) => {
   return (
     <div className="p-2 card card-place">
@@ -16,6 +16,7 @@ const CardPlace = ({
         <div className="d-flex justify-content-around align-items-start">
           <h5 className="card-title">{title}</h5>
           <ReactStars
+            className="stars"
             count={5}
             size={24}
             value={avgRating.avgTotal}
