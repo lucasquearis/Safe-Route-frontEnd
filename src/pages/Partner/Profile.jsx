@@ -21,7 +21,7 @@ const Profile = ({ profileInfos }) => {
         avgDistancingAviability,
         avgMaskUsage,
       },
-      // title,
+      title,
       description,
       address,
       city,
@@ -33,10 +33,12 @@ const Profile = ({ profileInfos }) => {
     const loadingBase = <h1>Loading...</h1>;
     const infosBase = (
       <div className="card mb-3">
-        <img className="card-img-top" alt="local" src={picture} />
+        <div className="partner-img-container">
+          <img className="partner-img" alt="local" src={picture} />
+        </div>
 
         <div className="flex-column justify-content-around card-body">
-          {/* <h2 className="card-title">{title}</h2> */}
+          <h2 className="card-title">{title}</h2>
           <p className="card-text">{description}</p>
         </div>
 
