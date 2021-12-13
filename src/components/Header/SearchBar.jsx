@@ -4,12 +4,14 @@ const SearchBar = () => {
   const { setInputsFilter } = useContext(PlaceContext);
 
   return (
-    <input
+    <div className="search-bar-container">
+      <input
       type="text"
       placeholder="Procurar..."
       onChange={({ target }) => setInputsFilter(target.value)}
-      className="search-bar"
+      className="input-group-text search-bar"
     />
+    </div>
   );
 };
 
