@@ -1,5 +1,6 @@
 import React from "react";
 import imgLogoFake from "../../img/logoTrybe.png";
+import signinIcon from "../../img/user.png";
 import SearchBar from "./SearchBar";
 
 const Header = () => {
@@ -11,8 +12,10 @@ const Header = () => {
         </div>
 
         <SearchBar />
-        
-        <button className="btn btn-dark">Sign in</button>
+
+        <button className="btn align-self-center btn-signin">
+          <img className="img-signin" src={signinIcon} alt="sign in" />
+        </button>
       </div>
     </header>
   );
