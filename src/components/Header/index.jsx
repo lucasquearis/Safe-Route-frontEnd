@@ -5,19 +5,26 @@ import SearchBar from "./SearchBar";
 
 const Header = () => {
   return (
-    <header className="d-flex justify-content-around">
-      <div className="d-flex justify-content-between header-container">
-        <div className="img-header-container">
-          <img className="img-header" src={imgLogoFake} alt="logo covid Safe" />
+    <>
+      <header className="d-flex justify-content-around">
+        <div className="d-flex justify-content-between header-container">
+          <div className="img-header-container">
+            <img
+              className="img-header"
+              src={imgLogoFake}
+              alt="logo covid Safe"
+            />
+          </div>
+
+          <SearchBar />
+
+          <button className="btn align-self-center btn-signin">
+            <img className="img-signin" src={signinIcon} alt="sign in" />
+          </button>
         </div>
-
-        <SearchBar />
-
-        <button className="btn align-self-center btn-signin">
-          <img className="img-signin" src={signinIcon} alt="sign in" />
-        </button>
-      </div>
-    </header>
+      </header>
+      <hr />
+    </>
   );
 };
 

@@ -9,6 +9,7 @@ const App = () => {
   return (
     <PlacesProvider>
       <Header />
+
       <Main />
       <Footer />
     </PlacesProvider>
