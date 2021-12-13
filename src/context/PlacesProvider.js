@@ -34,14 +34,14 @@ const PlacesProvider = ({ children }) => {
       return typeFilter.toLowerCase() === place.type.toLowerCase()
     });
   };
-
+ 
   const filterByRate = (places) => {
     return places.filter((place) => {
       if (rateFilter === "all") return true;
 
       return (
-        place.rate >= Number(rateFilter) &&
-        place.rate <= Number(rateFilter) + 1
+        place.avgRating.avgTotal >= Number(rateFilter) &&
+        place.avgRating.avgTotal <= Number(rateFilter) + 1
       );
     });
   };
