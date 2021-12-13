@@ -9,7 +9,6 @@ import "./app.css";
 const App = () => {
   return (
     <PlacesProvider>
-      {/* <Partner /> */}
       <Header />
       <Main />
       <Footer />

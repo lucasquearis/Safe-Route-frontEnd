@@ -1,8 +1,8 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import PlaceContext from "./PlaceContext";
 // import getAllPartners from "../services/mock/cardMock";
-import getAllPartners from "../services";
+import { getAllPartners } from "../services";
 import { useEffect, useState } from "react";
 
 const PlacesProvider = ({ children }) => {
@@ -21,7 +21,7 @@ const PlacesProvider = ({ children }) => {
 
   const filterByCities = (places) => {
     return places.filter((place) => {
-      if (cityFilter === 'all') return true;
+      if (cityFilter === "all") return true;
 
       return cityFilter.toLowerCase() === place.city.toLowerCase();
     });
@@ -29,12 +29,12 @@ const PlacesProvider = ({ children }) => {
 
   const filterByTypes = (places) => {
     return places.filter((place) => {
-      if (typeFilter === 'all') return true;
+      if (typeFilter === "all") return true;
 
-      return typeFilter.toLowerCase() === place.type.toLowerCase()
+      return typeFilter.toLowerCase() === place.type.toLowerCase();
     });
   };
- 
+
   const filterByRate = (places) => {
     return places.filter((place) => {
       if (rateFilter === "all") return true;
@@ -90,9 +90,9 @@ const PlacesProvider = ({ children }) => {
 
 PlacesProvider.propTypes = {
   children: PropTypes.oneOfType([
-      PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node
-  ]).isRequired
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
 
 export default PlacesProvider;
