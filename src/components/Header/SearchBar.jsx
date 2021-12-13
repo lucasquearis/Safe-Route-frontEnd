@@ -4,7 +4,7 @@ const SearchBar = () => {
   const { setInputsFilter } = useContext(PlaceContext);
 
   return (
-    <div className="align-self-center search-bar-container">
+    <div className="search-bar-container">
       <input
       type="text"
       placeholder="Procurar..."

@@ -1,7 +1,6 @@
 import React from "react";
 import imgLogoFake from "../../img/logoTrybe.png";
 import signinIcon from "../../img/user.png";
-import SearchBar from "./SearchBar";
 
 const Header = () => {
   return (
@@ -11,7 +10,7 @@ const Header = () => {
           <img className="img-header" src={imgLogoFake} alt="logo covid Safe" />
         </div>
 
-        <SearchBar />
+        <h1 className="align-self-center title-header">Safe Route</h1>
 
         <button className="btn align-self-center btn-signin">
           <img className="img-signin" src={signinIcon} alt="sign in" />

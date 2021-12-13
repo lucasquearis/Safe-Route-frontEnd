@@ -65,9 +65,8 @@ main {
   overflow: auto;
 }
 
-.text-hero {
+.title-header {
   color: white;
-  font-size: 1rem;
   text-align: center;
 }
 
