@@ -8,9 +8,9 @@ const PlacesProvider = ({ children }) => {
   const [basePlaces, setBasePlaces] = useState([]);
   const [renderBasePlaces, setRenderBasePlaces] = useState(basePlaces);
   const [inputsFilter, setInputsFilter] = useState("");
-  const [cityFilter, setCityFilter] = useState({ type: "city", filter: [] });
-  const [typeFilter, setTypeFilter] = useState({ type: "type", filter: [] });
-  const [rateFilter, setRateFilter] = useState({ type: "rate", filter: "all" });
+  const [cityFilter, setCityFilter] = useState("all");
+  const [typeFilter, setTypeFilter] = useState("all");
+  const [rateFilter, setRateFilter] = useState("all");
 
   const searchBarFilter = () => {
     return basePlaces.filter((place) =>
@@ -20,31 +20,27 @@ const PlacesProvider = ({ children }) => {
 
   const filterByCities = (places) => {
     return places.filter((place) => {
-      if (cityFilter.filter.length === 0) return true;
+      if (cityFilter === 'all') return true;
 
-      return cityFilter.filter.some(
-        (filterCity) => filterCity.toLowerCase() === place.city.toLowerCase()
-      );
+      return cityFilter.toLowerCase() === place.city.toLowerCase();
     });
   };
 
   const filterByTypes = (places) => {
     return places.filter((place) => {
-      if (typeFilter.filter.length === 0) return true;
+      if (typeFilter === 'all') return true;
 
-      return typeFilter.filter.some(
-        (filterType) => filterType.toLowerCase() === place.type.toLowerCase()
-      );
+      return typeFilter.toLowerCase() === place.type.toLowerCase()
     });
   };
 
   const filterByRate = (places) => {
     return places.filter((place) => {
-      if (rateFilter.filter === "all") return true;
+      if (rateFilter === "all") return true;
 
       return (
-        place.rate >= Number(rateFilter.filter) &&
-        place.rate <= Number(rateFilter.filter) + 1
+        place.rate >= Number(rateFilter) &&
+        place.rate <= Number(rateFilter) + 1
       );
     });
   };
@@ -52,7 +48,6 @@ const PlacesProvider = ({ children }) => {
   const handleOptionsFilters = () => {
     let filteredPlaces = [];
     filteredPlaces = searchBarFilter();
-
     filteredPlaces = filterByCities(filteredPlaces);
     filteredPlaces = filterByTypes(filteredPlaces);
     filteredPlaces = filterByRate(filteredPlaces);
@@ -76,12 +71,14 @@ const PlacesProvider = ({ children }) => {
     renderBasePlaces,
     setRenderBasePlaces,
     basePlaces,
-    cityFilter,
     setCityFilter,
     setTypeFilter,
     setRateFilter,
     handleOptionsFilters,
     setInputsFilter,
+    cityFilter,
+    typeFilter,
+    rateFilter,
   };
 
   return (
@@ -90,7 +87,10 @@ const PlacesProvider = ({ children }) => {
 };
 
 PlacesProvider.propTypes = {
-  children: PropTypes.element.isRequired,
-}
+  children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node
+  ]).isRequired
+};
 
 export default PlacesProvider;

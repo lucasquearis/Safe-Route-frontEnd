@@ -28,7 +28,7 @@ const CardPlace = ({
 CardPlace.propTypes = {
   place: PropTypes.shape({
     title: PropTypes.string,
-    rate: PropTypes.string,
+    rate: PropTypes.number,
     describe: PropTypes.string,
     description: PropTypes.string,
     city: PropTypes.string,

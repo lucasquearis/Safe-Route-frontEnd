@@ -8,7 +8,7 @@ const CardPlaces = () => {
   const places = renderBasePlaces || [];
   // Adiciona Loading..
   return (
-    <section className="places">
+    <section data-testid="section-cards" className="places">
       <div className="d-flex justify-content-center">
         <div className="d-flex flex-wrap justify-content-center">
           {places.map((place, index) => (
