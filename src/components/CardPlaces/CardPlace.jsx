@@ -1,24 +1,36 @@
 import PropTypes from "prop-types";
 import React from "react";
-// import imageCard from "../../img/cardImg.jpg";
+import ReactStars from "react-rating-stars-component";
+import picture from "../../img/cardImg.jpg";
 
 const CardPlace = ({
-  place: { picture, title, address, city, state, type, avgRating },
+  place: { /* picture,  */ title, address, city, state, type, avgRating },
 }) => {
   return (
     <div className="p-2 card card-place">
-      <img className="card-img-top" alt="Foto do local" src={picture} />
+      <div className="container-card-place">
+        <img className="img-card-place" alt="Foto do local" src={picture} />
+      </div>
 
-      <div className="card-body">
-        <h3 className="card-title">{title}</h3>
-        <div>
-          <p>{avgRating.avgTotal}</p>
+      <div className="flex-column justify-content-around  align-items-end card-body">
+        <div className="d-flex justify-content-around align-items-start">
+          <h5 className="card-title">{title}</h5>
+          <ReactStars
+            count={5}
+            size={24}
+            value={avgRating.avgTotal}
+            activeColor="#ffd700"
+          />
+        </div>
+
+        <div className="d-flex justify-content-center align-items-center">
           <p>{type}</p>
         </div>
-        <div>
-          <p>{city}</p>
-          <p>{address}</p>
-          <p>{state}</p>
+
+        <div className="d-flex justify-content-center align-items-center">
+          <p>
+            {address} {city}-{state}
+          </p>
         </div>
       </div>
     </div>
