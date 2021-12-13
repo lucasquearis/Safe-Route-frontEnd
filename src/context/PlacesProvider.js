@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import PlaceContext from "./PlaceContext";
-import cardMock from "../services/mock/cardMock";
+// import cardMock from "../services/mock/cardMock";
+import getAllPartners from "../services";
 import { useEffect, useState } from "react";
 
 const PlacesProvider = ({ children }) => {
@@ -64,8 +65,9 @@ const PlacesProvider = ({ children }) => {
     handleOptionsFilters();
   }, [cityFilter, inputsFilter, typeFilter, rateFilter]);
 
-  useEffect(() => {
-    setBasePlaces(cardMock);
+  useEffect(async () => {
+    const partners = await getAllPartners();
+    setBasePlaces(partners);
   }, []);
 
   useEffect(() => {

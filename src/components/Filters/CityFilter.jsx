@@ -32,7 +32,7 @@ const CityFilter = () => {
       >
         <option selected value="">Todas</option>
         <option value="curitiba">Curitiba</option>
-        <option value="campinas">Campinas</option>
+        <option value="Belo Horizonte">Belo Horizonte</option>
         <option value="ceara">Ceara</option>
       </select>
     </div>
