@@ -1,30 +1,34 @@
 import React from "react";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import CardPlace from "../../components/CardPlaces/CardPlace";
 import PlaceContext from "../../context/PlaceContext";
 
 const CardPlaces = () => {
   const { renderBasePlaces } = useContext(PlaceContext);
   const [isLoading, setIsLoading] = useState(true);
-
+  
   useEffect(() => {
-    if(renderBasePlaces) setIsLoading(false);
-    setIsLoading
+    console.log(renderBasePlaces);
+    console.log(isLoading);
+    if(renderBasePlaces.length) return setIsLoading(false);
+    setIsLoading(true);
   }, [renderBasePlaces])
-
-  const loading = () => {
-    const places = renderBasePlaces || [];
+  
+  const renderCard = () => {
     const loadingBase = <p>Loading...</p>;
-  }
-
+    const cardBase = renderBasePlaces.map((place, index) => (
+      <CardPlace place={place} key={index} />
+    ));
+      console.log('cardBase', cardBase);
+    return isLoading ? loadingBase : cardBase;
+  };
+  
   // Adiciona Loading..
   return (
     <section data-testid="section-cards" className="places">
       <div className="d-flex justify-content-center">
         <div className="d-flex flex-wrap justify-content-center">
-          {places.map((place, index) => (
-            <CardPlace place={place} key={index} />
-          ))}
+          {renderCard()}
         </div>
       </div>
     </section>
