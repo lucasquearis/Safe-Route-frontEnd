@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
 import ReactStars from "react-rating-stars-component";
-import picture from "../../img/cardImg.jpg";
+// import picture from "../../img/cardImg.jpg";
 
 const CardPlace = ({
-  place: { /* picture,  */ title, address, city, state, type, avgRating },
+  place: { picture, title, address, city, state, type, avgRating },
 }) => {
   return (
     <div className="p-2 card card-place">

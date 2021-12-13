@@ -4,10 +4,12 @@ import Header from "./components/Header";
 import PlacesProvider from "./context/PlacesProvider";
 import React from "react";
 import "./app.css";
+// import Partner from "./pages/Partner";
 
 const App = () => {
   return (
     <PlacesProvider>
+      {/* <Partner /> */}
       <Header />
       <Main />
       <Footer />
