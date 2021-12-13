@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import PlacesProvider from "./context/PlacesProvider";
 import React from "react";
 import "./app.css";
+// import Partner from "./pages/Partner";
 
 const App = () => {
   return (
