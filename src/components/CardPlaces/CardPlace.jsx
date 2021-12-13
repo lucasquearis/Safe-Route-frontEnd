@@ -41,7 +41,7 @@ const CardPlace = ({
 CardPlace.propTypes = {
   place: PropTypes.shape({
     title: PropTypes.string,
-    avgRating: PropTypes.number,
+    avgRating: PropTypes.object,
     city: PropTypes.string,
     address: PropTypes.string,
     state: PropTypes.string,
