@@ -24,24 +24,51 @@ const Profile = ({ profileInfos }) => {
       city,
       state,
       picture,
+      posts,
     } = profileInfos;
 
     const loadingBase = <h1>Loading...</h1>;
     const infosBase = (
-      <div>
-        <h1>{title}</h1>
-        <img alt="local" src={picture} />
-        <h2>Avaliação Média: {avgTotal}</h2>
-        <p>Álcool em Gel Disponível: {avgAlcoholAviability}</p>
-        <p>Local Limpo: {avgCleanliness}</p>
-        <p>Distânciamento Social: {avgDistancingAviability}</p>
-        <p>Uso da Máscara: {avgMaskUsage}</p>
-        <h3>Endereço: {address}</h3>
-        <h3>Cidade: {city}</h3>
-        <h3>Estado: {state}</h3>
-        <h4>Descrição: {description}</h4>
+      <div className="card mb-3">
+        <img className="card-img-top" alt="local" src={picture} />
+
+        <div className="card-body">
+          <h2 className="card-title">{title}</h2>
+          <p className="card-text">{description}</p>
+        </div>
+
+        <div className="card-body">
+          <h3 className="card-title">Endereço:</h3>
+          <p className="card-text">{address}</p>
+          <p className="card-text">
+            {city}-{state}
+          </p>
+        </div>
+
+        <div className="card-body">
+          <h2 className="card-title">Avaliações</h2>
+          <p className="card-text">Média das avaliações: {avgTotal}</p>
+          <p className="card-text">
+            Álcool em Gel Disponível: {avgAlcoholAviability}
+          </p>
+          <p className="card-text">Local Limpo: {avgCleanliness}</p>
+          <p className="card-text">
+            Distânciamento Social: {avgDistancingAviability}
+          </p>
+          <p className="card-text">Uso da Máscara: {avgMaskUsage}</p>
+        </div>
+
+        <div className="card-body">
+          <h3 className="card-title">Comentários:</h3>
+          {posts.map((post, index) => (
+            <p className="card-text" key={index}>
+              Comentario {index + 1}: {post.comment}
+            </p>
+          ))}
+        </div>
       </div>
     );
+
     return isLoading ? loadingBase : infosBase;
   };
 
