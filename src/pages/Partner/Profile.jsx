@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactStars from "react-rating-stars-component";
 import PropTypes from "prop-types";
 
 const Profile = ({ profileInfos }) => {
@@ -9,7 +10,7 @@ const Profile = ({ profileInfos }) => {
     return setIsLoading(false);
   }, [profileInfos]);
 
-  console.log("o post --> p", profileInfos.posts);
+  console.log("o post --> p", profileInfos);
 
   const renderProfile = () => {
     const {
@@ -20,7 +21,7 @@ const Profile = ({ profileInfos }) => {
         avgDistancingAviability,
         avgMaskUsage,
       },
-      title,
+      // title,
       description,
       address,
       city,
@@ -34,37 +35,97 @@ const Profile = ({ profileInfos }) => {
       <div className="card mb-3">
         <img className="card-img-top" alt="local" src={picture} />
 
-        <div className="card-body">
-          <h2 className="card-title">{title}</h2>
+        <div className="flex-column justify-content-around card-body">
+          {/* <h2 className="card-title">{title}</h2> */}
           <p className="card-text">{description}</p>
         </div>
 
-        <div className="card-body">
+        <div className="flex-column justify-content-around card-body">
           <h3 className="card-title">Endereço:</h3>
-          <p className="card-text">{address}</p>
-          <p className="card-text">
-            {city}-{state}
-          </p>
+          <div>
+            <p className="card-text">
+              {address} - {city}-{state}
+            </p>
+          </div>
+        </div>
+
+        <div className="rate-container">
+          <div className="d-flex justify-content-around">
+            <h2 className="card-title">Avaliações</h2>
+          </div>
+
+          <div className="d-flex justify-content-around ">
+            <p className="">
+              Média das avaliações:
+              {
+                <ReactStars
+                  count={5}
+                  size={24}
+                  value={avgTotal}
+                  activeColor="#ffd700"
+                />
+              }
+            </p>
+            <p className="">
+              Álcool em Gel Disponível:
+              {
+                <ReactStars
+                  count={5}
+                  size={24}
+                  value={avgAlcoholAviability}
+                  activeColor="#ffd700"
+                />
+              }
+            </p>
+            <p className="">
+              Local Limpo:
+              {
+                <ReactStars
+                  count={5}
+                  size={24}
+                  value={avgCleanliness}
+                  activeColor="#ffd700"
+                />
+              }
+            </p>
+            <p className="">
+              Distânciamento Social:
+              {
+                <ReactStars
+                  count={5}
+                  size={24}
+                  value={avgDistancingAviability}
+                  activeColor="#ffd700"
+                />
+              }
+            </p>
+            <p className="">
+              Uso da Máscara:
+              {
+                <ReactStars
+                  count={5}
+                  size={24}
+                  value={avgMaskUsage}
+                  activeColor="#ffd700"
+                />
+              }
+            </p>
+          </div>
         </div>
 
         <div className="card-body">
-          <h2 className="card-title">Avaliações</h2>
-          <p className="card-text">Média das avaliações: {avgTotal}</p>
-          <p className="card-text">
-            Álcool em Gel Disponível: {avgAlcoholAviability}
-          </p>
-          <p className="card-text">Local Limpo: {avgCleanliness}</p>
-          <p className="card-text">
-            Distânciamento Social: {avgDistancingAviability}
-          </p>
-          <p className="card-text">Uso da Máscara: {avgMaskUsage}</p>
-        </div>
-
-        <div className="card-body">
-        <h3 className="card-title">Comentários:</h3>
-          {posts.map((post, index) => (
-            <p className="card-text" key={index}>Comentario {index + 1}: {post.comment}</p>
-          ))}
+          <h3 className="card-title">Comentários:</h3>
+          {posts && posts.length > 0 ? (
+            posts.map((post, index) => (
+              <p className="card-text" key={index}>
+                Comentário {index + 1}: {post.comment}
+              </p>
+            ))
+          ) : (
+            <p className="card-text">
+              Ainda não há comentários para esse local.
+            </p>
+          )}
         </div>
       </div>
     );
