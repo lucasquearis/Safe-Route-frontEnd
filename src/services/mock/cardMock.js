@@ -9,7 +9,7 @@ const listMock = [
     picture: "URL",
     description:
       "Hotel localizado na zona central de BH Hotel localizado na zona central de BH Hotel localizado na zona central de BH Hotel localizado na zona central de BH Hotel localizado na zona central de BH",
-    type: "BAr",
+    type: "Bar",
     posts: [
       {
         _id: "61b6598776da8df9de74fbe7",
@@ -42,7 +42,7 @@ const listMock = [
     picture: "URL",
     description:
       "Hotel localizado na zona central de BH Hotel localizado na zona central de BH Hotel localizado na zona central de BH Hotel localizado na zona central de BH Hotel localizado na zona central de BH",
-    type: "BAr",
+    type: "Bar",
     posts: [
       {
         _id: "61b6598776da8df9de74fbe7",
@@ -141,7 +141,7 @@ const listMock = [
     picture: "URL",
     description:
       "Hotel localizado na zona central de BH Hotel localizado na zona central de BH Hotel localizado na zona central de BH Hotel localizado na zona central de BH Hotel localizado na zona central de BH",
-    type: "BAr",
+    type: "Bar",
     posts: [
       {
         _id: "61b6598776da8df9de74fbe7",
@@ -174,7 +174,7 @@ const listMock = [
     picture: "URL",
     description:
       "Hotel localizado na zona central de BH Hotel localizado na zona central de BH Hotel localizado na zona central de BH Hotel localizado na zona central de BH Hotel localizado na zona central de BH",
-    type: "BAr",
+    type: "Bar",
     posts: [
       {
         _id: "61b6598776da8df9de74fbe7",

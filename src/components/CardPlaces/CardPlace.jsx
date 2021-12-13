@@ -12,7 +12,7 @@ const CardPlace = ({
         <img className="img-card-place" alt="Foto do local" src={picture} />
       </div>
 
-      <div className="flex-column align-items-start card-body">
+      <div className="flex-column justify-content-around  align-items-end card-body">
         <div className="d-flex justify-content-around align-items-start">
           <h5 className="card-title">{title}</h5>
           <ReactStars
@@ -23,11 +23,13 @@ const CardPlace = ({
           />
         </div>
 
-        <p>{type}</p>
+        <div className="d-flex justify-content-center align-items-center">
+          <p>{type}</p>
+        </div>
 
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center align-items-center">
           <p>
-            {address} {city} {state}{" "}
+            {address} {city}-{state}
           </p>
         </div>
       </div>
