@@ -1,25 +1,25 @@
 import PropTypes from "prop-types";
 import React from "react";
-import imageCard from "../../img/cardImg.jpg";
+// import imageCard from "../../img/cardImg.jpg";
 
 const CardPlace = ({
-  place: { title, rate, description, city, type /* address, image, state  */ },
+  place: { picture, title, address, city, state, type, avgRating },
 }) => {
   return (
     <div className="p-2 card card-place">
-      <img className="card-img-top" alt="Foto do local" src={imageCard} />
+      <img className="card-img-top" alt="Foto do local" src={picture} />
 
       <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <p>{rate}</p>
-        <p className="card-text">{description}</p>
-        <p>{city}</p>
-        <p>{type}</p>
-        <a href="#" className="btn btn-primary">
-          Visitar
-        </a>
-        {/* <p>{address}</p> */}
-        {/* <p>{state}</p> */}
+        <h3 className="card-title">{title}</h3>
+        <div>
+          <p>{avgRating.avgTotal}</p>
+          <p>{type}</p>
+        </div>
+        <div>
+          <p>{city}</p>
+          <p>{address}</p>
+          <p>{state}</p>
+        </div>
       </div>
     </div>
   );
@@ -28,11 +28,12 @@ const CardPlace = ({
 CardPlace.propTypes = {
   place: PropTypes.shape({
     title: PropTypes.string,
-    rate: PropTypes.number,
-    describe: PropTypes.string,
-    description: PropTypes.string,
+    avgRating: PropTypes.number,
     city: PropTypes.string,
+    address: PropTypes.string,
+    state: PropTypes.string,
     type: PropTypes.string,
+    picture: PropTypes.string,
   }),
 };
 
