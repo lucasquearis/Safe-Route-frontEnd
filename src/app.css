@@ -61,11 +61,15 @@ header {
 }
 
 .card-place {
-  /* margin: 10px; */
+  margin: 10px;
   min-width: 300px;
   width: 20vw;
   height: 10vh;
   min-height: 400px;
+}
+
+.container-list-cards {
+  width: 80vw;
 }
 
 .container-card-place {
@@ -79,6 +83,12 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.card-body {
+  box-sizing: border-box;
+  /* overflow: auto */
+
 }
 
 /*------------------------ Inicio footer -------------- */
