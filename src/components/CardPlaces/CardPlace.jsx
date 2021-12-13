@@ -7,10 +7,12 @@ const CardPlace = ({
 }) => {
   return (
     <div className="p-2 card card-place">
-      <img className="card-img-top" alt="Foto do local" src={picture} />
+      <div  className="container-card-place">
+      <img className="img-card-place" alt="Foto do local" src={picture} />
+      </div>
 
       <div className="card-body">
-        <h3 className="card-title">{title}</h3>
+        <h5 className="card-title">{title}</h5>
         <div>
           <p>{avgRating.avgTotal}</p>
           <p>{type}</p>
