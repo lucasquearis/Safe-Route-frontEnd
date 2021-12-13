@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Footer from "../../components/Footer";
 import covidSafe from "../../img/covidSafe.png";
 import { loginUser } from "../../services";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [emailState, setEmailState] = useState("");
@@ -59,6 +59,12 @@ const Login = () => {
         </label>
         <button onClick={authToken}>Entrar</button>
       </form>
+      <div>
+        <h2>Ainda não possui cadastro?</h2>
+        <h4>
+          Crie sua conta <Link to="/cadastro">aqui</Link>
+        </h4>
+      </div>
       <Footer />
     </div>
   );
