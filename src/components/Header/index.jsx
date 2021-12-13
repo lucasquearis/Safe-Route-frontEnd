@@ -2,6 +2,7 @@ import React from "react";
 import imgLogoFake from "../../img/logoTrybe.png";
 import signinIcon from "../../img/user.png";
 import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -13,9 +14,11 @@ const Header = () => {
 
         <SearchBar />
 
-        <button className="btn align-self-center btn-signin">
-          <img className="img-signin" src={signinIcon} alt="sign in" />
-        </button>
+        <Link to="/login">
+          <button className="btn align-self-center btn-signin">
+            <img className="img-signin" src={signinIcon} alt="sign in" />
+          </button>
+        </Link>
       </div>
     </header>
   );
