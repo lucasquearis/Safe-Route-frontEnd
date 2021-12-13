@@ -6,12 +6,13 @@ import PlaceContext from "../../context/PlaceContext";
 const CardPlaces = () => {
   const { renderBasePlaces } = useContext(PlaceContext);
   const [isLoading, setIsLoading] = useState(true);
-  
+
   useEffect(() => {
-    if(!renderBasePlaces || renderBasePlaces.length) return setIsLoading(false);
+    if (!renderBasePlaces || renderBasePlaces.length)
+      return setIsLoading(false);
     setIsLoading(true);
-  }, [renderBasePlaces])
-  
+  }, [renderBasePlaces]);
+
   const renderCard = () => {
     const places = renderBasePlaces || [];
     const loadingBase = <p>Loading...</p>;
@@ -20,10 +21,12 @@ const CardPlaces = () => {
     ));
     return isLoading ? loadingBase : cardBase;
   };
-  
-  // Adiciona Loading..
+
   return (
-    <section data-testid="section-cards" className="d-flex justify-content-center places">
+    <section
+      data-testid="section-cards"
+      className="d-flex justify-content-center places"
+    >
       <div className="d-flex justify-content-center container-list-cards">
         <div className="d-flex flex-wrap justify-content-center">
           {renderCard()}
