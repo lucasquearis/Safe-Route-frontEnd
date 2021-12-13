@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="d-flex justify-content-center hero-container">
       <div className="jumbotron hero">
-        <p data-testid="text-hero">
+        <p className="text-hero">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum ad,
           adipisci animi, eveniet, ea error et praesentium neque enim repellat
           aliquid officiis! Voluptatem modi debitis cum neque iure! Voluptatum,
