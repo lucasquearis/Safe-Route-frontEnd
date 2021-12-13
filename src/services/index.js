@@ -13,3 +13,4 @@ async function getAllPartners() {
 }
 
 export default getAllPartners;
+
