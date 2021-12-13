@@ -3,7 +3,7 @@ import "../footer.css";
 const Footer = () => {
   return (
     <footer className="card-group">
-      <section className="card text-white mb-">
+      <section className="card cartao text-white mb-">
         <div className="card-body">
           <h4 className="card-title">Sobre</h4>
           <p className="card-text">
@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
       </section>
 
-      <section className="card text-white mb-2">
+      <section className="card cartao text-white mb-2">
         <div className="card-body">
           <h5 className="card-title">Quem Somos</h5>
           <p className="card-text">
@@ -105,7 +105,7 @@ const Footer = () => {
         </div>
       </section>
 
-      <section className="card text-white mb-2">
+      <section className="card cartao text-white mb-2">
         <div className="card-body">
           <h5 className="card-title">Tecnologias Utilizadas</h5>
           <div className="cointainer icons-grid ">
