@@ -57,7 +57,7 @@ const Profile = ({ profileInfos }) => {
           </div>
 
           <div className="d-flex justify-content-around ">
-            <p className="">
+            <div className="">
               Média das avaliações:
               {
                 <ReactStars
@@ -67,8 +67,8 @@ const Profile = ({ profileInfos }) => {
                   activeColor="#ffd700"
                 />
               }
-            </p>
-            <p className="">
+            </div>
+            <div className="">
               Álcool em Gel Disponível:
               {
                 <ReactStars
@@ -78,8 +78,8 @@ const Profile = ({ profileInfos }) => {
                   activeColor="#ffd700"
                 />
               }
-            </p>
-            <p className="">
+            </div>
+            <div className="">
               Local Limpo:
               {
                 <ReactStars
@@ -89,8 +89,8 @@ const Profile = ({ profileInfos }) => {
                   activeColor="#ffd700"
                 />
               }
-            </p>
-            <p className="">
+            </div>
+            <div className="">
               Distânciamento Social:
               {
                 <ReactStars
@@ -100,8 +100,8 @@ const Profile = ({ profileInfos }) => {
                   activeColor="#ffd700"
                 />
               }
-            </p>
-            <p className="">
+            </div>
+            <div className="">
               Uso da Máscara:
               {
                 <ReactStars
@@ -111,7 +111,7 @@ const Profile = ({ profileInfos }) => {
                   activeColor="#ffd700"
                 />
               }
-            </p>
+            </div>
           </div>
         </div>
 
