@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext } from "react";
 import PlaceContext from "../../context/PlaceContext";
 
@@ -11,7 +12,7 @@ const RateFilter = () => {
           Avaliações
         </label>
       </div>
-selected
+      
       <select
         className="custom-select "
         id="rate"
@@ -19,7 +20,9 @@ selected
           setRateFilter({ type: "rate", filter: value })
         }
       >
-        <option selected value="all">Todas</option>
+        <option selected value="all">
+          Todas
+        </option>
         <option value="4">Notas entre 4 e 5</option>
         <option value="3">Notas entre 3 e 4</option>
         <option value="2">Notas entre 2 e 3</option>

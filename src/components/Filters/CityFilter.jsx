@@ -1,10 +1,11 @@
+import React from "react";
 import { useContext } from "react";
 import PlaceContext from "../../context/PlaceContext";
 
 const CityFilter = () => {
   const {
     setCityFilter,
-    cityFilter: { filter },
+    // cityFilter: { filter },
   } = useContext(PlaceContext);
 
   const hadleFilter = (value) => {

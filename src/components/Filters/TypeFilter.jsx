@@ -1,3 +1,4 @@
+import React from "react";
 import PlaceContext from "../../context/PlaceContext";
 import { useContext } from "react";
 
@@ -26,7 +27,9 @@ const TypeFilter = () => {
         id="type"
         onChange={({ target: { value } }) => handleFilter(value)}
       >
-        <option selected value="">Todas</option>
+        <option selected value="">
+          Todas
+        </option>
         <option value="hospedagem">Hospedagem</option>
         <option value="alimentacao">Alimentação</option>
         <option value="bar">Bar</option>

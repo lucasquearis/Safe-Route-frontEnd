@@ -1,4 +1,5 @@
-import react from "react";
+import PropTypes from "prop-types";
+import React from "react";
 import imageCard from "../../img/cardImg.jpg";
 
 const CardPlace = ({
@@ -22,6 +23,17 @@ const CardPlace = ({
       </div>
     </div>
   );
+};
+
+CardPlace.propTypes = {
+  place: PropTypes.shape({
+    title: PropTypes.string,
+    rate: PropTypes.string,
+    describe: PropTypes.string,
+    description: PropTypes.string,
+    city: PropTypes.string,
+    type: PropTypes.string,
+  }),
 };
 
 export default CardPlace;

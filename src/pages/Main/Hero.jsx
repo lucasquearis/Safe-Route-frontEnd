@@ -1,18 +1,20 @@
+import React from "react";
+
 const Hero = () => {
   return (
-    <div className="container hero-container">
+    <div className="d-flex justify-content-center hero-container">
       <div className="jumbotron hero">
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est corrupti
-          dicta facere, ipsa fuga esse in quibusdam rerum tempora at obcaecati
-          excepturi quos repellat explicabo, culpa aliquid, modi similique quae!
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus tenetur impedit consequuntur nulla quam numquam ab eius
-          cupiditate, libero fugit quisquam quas unde atque, ratione quaerat
-          iure aspernatur tempora. Nihil. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Tenetur, doloribus quibusdam enim iste
-          vel necessitatibus reiciendis itaque ratione veritatis quae? Est illo
-          ex porro rerum in, consequatur ipsa tempora dolores.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum ad,
+          adipisci animi, eveniet, ea error et praesentium neque enim repellat
+          aliquid officiis! Voluptatem modi debitis cum neque iure! Voluptatum,
+          magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+          soluta neque expedita beatae itaque perferendis inventore temporibus,
+          quae consequuntur, porro commodi aperiam voluptas, sint hic nam
+          placeat obcaecati asperiores. Praesentium. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Veniam obcaecati autem dicta vero animi
+          sint quam rem expedita deleniti, reiciendis corporis, quod officia
+          molestiae et, reprehenderit voluptatibus quis quas. Blanditiis.
         </p>
       </div>
     </div>
