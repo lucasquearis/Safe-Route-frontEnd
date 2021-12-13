@@ -9,8 +9,6 @@ const Profile = ({ profileInfos }) => {
     return setIsLoading(false);
   }, [profileInfos]);
 
-  console.log(profileInfos);
-
   const renderProfile = () => {
     const {
       avgRating: {
@@ -27,8 +25,6 @@ const Profile = ({ profileInfos }) => {
       state,
       picture,
     } = profileInfos;
-    console.log(profileInfos);
-    console.log(isLoading);
 
     const loadingBase = <h1>Loading...</h1>;
     const infosBase = (

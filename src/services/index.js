@@ -26,4 +26,27 @@ async function getPartnerById(id) {
   }
 }
 
-export { getAllPartners, getPartnerById };
+async function loginUser(body) {
+  console.log("Iniciando fetch");
+
+  const config = {
+    method: "POST",
+    body: JSON.stringify(body),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  try {
+    const partners = await fetch(
+      "https://grupo2-backend.herokuapp.com/login",
+      config
+    ).then((result) => result.json());
+    console.log("concluido fetch");
+
+    return partners;
+  } catch (error) {
+    throw new Error("Problemas com API");
+  }
+}
+
+export { getAllPartners, getPartnerById, loginUser };
