@@ -8,7 +8,7 @@ async function getAllPartners() {
     
       return partners;
   } catch (error) {
-      throw new Error('Deu pau na API /partner')
+      throw new Error('Problemas com API')
   }
 }
 

@@ -6,7 +6,6 @@ const TypeFilter = () => {
   const { setTypeFilter, typeFilter, basePlaces } = useContext(PlaceContext);
   const [optionsType, setOptionsType] = useState([]);
 
-  console.log(basePlaces);
   const handleFilter = ({ target: { value } }) => {
     setTypeFilter(value);
   };
