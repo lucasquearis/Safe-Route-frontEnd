@@ -58,6 +58,7 @@ header {
 .filters {
   justify-content: flex-end;
   padding: 0 10vw;
+  margin-bottom: 2vh;
 }
 
 .filter-option {
@@ -78,7 +79,7 @@ header {
   min-height: 400px;
   transition: all 0.2s ease-in-out;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
-  overflow: auto;
+  overflow: hidden;
   text-align: center;
 
 }
@@ -92,7 +93,7 @@ header {
   width: 80vw;
 }
 
-.container-card-place {
+.container-card-image {
   min-width: 280px;
   width: 19vw;
   height: 5vh;
