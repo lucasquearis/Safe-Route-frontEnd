@@ -10,13 +10,14 @@ const CardPlaces = () => {
   useEffect(() => {
     console.log(renderBasePlaces);
     console.log(isLoading);
-    if(renderBasePlaces.length) return setIsLoading(false);
+    if(!renderBasePlaces || renderBasePlaces.length) return setIsLoading(false);
     setIsLoading(true);
   }, [renderBasePlaces])
   
   const renderCard = () => {
+    const places = renderBasePlaces || [];
     const loadingBase = <p>Loading...</p>;
-    const cardBase = renderBasePlaces.map((place, index) => (
+    const cardBase = places.map((place, index) => (
       <CardPlace place={place} key={index} />
     ));
       console.log('cardBase', cardBase);
