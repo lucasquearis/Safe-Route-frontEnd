@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PlaceContext from "../../context/PlaceContext";
 import { useContext } from "react";
 
 const TypeFilter = () => {
-  const { setTypeFilter, typeFilter } = useContext(PlaceContext);
+  const { setTypeFilter, typeFilter, basePlaces } = useContext(PlaceContext);
+  const [optionsType, setOptionsType] = useState([]);
 
+  console.log(basePlaces);
   const handleFilter = ({ target: { value } }) => {
     setTypeFilter(value);
   };
+
+  useEffect(() => {
+    let options = [];
+    basePlaces.forEach((place) => {
+      if (!options.includes(place.type)) options.push(place.type);
+    });
+    setOptionsType(options);
+  }, [basePlaces]);
 
   return (
     <div className="input-group mb-1 filter-option">
@@ -25,9 +35,11 @@ const TypeFilter = () => {
         onChange={handleFilter}
       >
         <option value="all">Todas</option>
-        <option value="hospedagem">Hospedagem</option>
-        <option value="alimentacao">Alimentação</option>
-        <option value="bar">Bar</option>
+        {optionsType.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
       </select>
     </div>
   );

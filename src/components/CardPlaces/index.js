@@ -8,8 +8,6 @@ const CardPlaces = () => {
   const [isLoading, setIsLoading] = useState(true);
   
   useEffect(() => {
-    console.log(renderBasePlaces);
-    console.log(isLoading);
     if(!renderBasePlaces || renderBasePlaces.length) return setIsLoading(false);
     setIsLoading(true);
   }, [renderBasePlaces])
@@ -20,7 +18,6 @@ const CardPlaces = () => {
     const cardBase = places.map((place, index) => (
       <CardPlace place={place} key={index} />
     ));
-      console.log('cardBase', cardBase);
     return isLoading ? loadingBase : cardBase;
   };
   

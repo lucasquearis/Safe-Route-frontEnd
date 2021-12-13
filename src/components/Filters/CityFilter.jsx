@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useContext } from "react";
 import PlaceContext from "../../context/PlaceContext";
 
 const CityFilter = () => {
-  const { setCityFilter, cityFilter } = useContext(PlaceContext);
+  const { setCityFilter, cityFilter, basePlaces } = useContext(PlaceContext);
+  const [optionsCity, setOptionsCity] = useState([]);
 
   const handleFilter = ({ target: { value } }) => {
     setCityFilter(value);
   };
+
+  useEffect(() => {
+    let options = [];
+    basePlaces.forEach((place) => {
+      if (!options.includes(place.city)) options.push(place.city);
+    });
+    setOptionsCity(options);
+  }, [basePlaces]);
 
   return (
     <div className="input-group mb-1 filter-option">
@@ -16,7 +25,6 @@ const CityFilter = () => {
           Cidades
         </label>
       </div>
-
       <select
         className="custom-select"
         id="cities"
@@ -25,9 +33,11 @@ const CityFilter = () => {
         onChange={handleFilter}
       >
         <option value="all">Todas</option>
-        <option value="curitiba">Curitiba</option>
-        <option value="Belo Horizonte">Belo Horizonte</option>
-        <option value="ceara">Ceara</option>
+        {optionsCity.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
       </select>
     </div>
   );
