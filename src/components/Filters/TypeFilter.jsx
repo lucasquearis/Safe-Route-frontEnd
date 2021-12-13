@@ -3,15 +3,10 @@ import PlaceContext from "../../context/PlaceContext";
 import { useContext } from "react";
 
 const TypeFilter = () => {
-  const { setTypeFilter } = useContext(PlaceContext);
+  const { setTypeFilter, typeFilter } = useContext(PlaceContext);
 
-  const handleFilter = (value) => {
-    if (!value) {
-      return setTypeFilter({ type: "type", filter: [] });
-    }
-
-    return setTypeFilter({ type: "type", filter: [value] });
-    // return setTypeFilter({ type: "type", filter: [...filter, value] }); --> Usar quando for fazer logica de array de filtros acumulativa
+  const handleFilter = ({ target: { value } }) => {
+    setTypeFilter(value);
   };
 
   return (
@@ -25,11 +20,11 @@ const TypeFilter = () => {
       <select
         className="custom-select"
         id="type"
-        onChange={({ target: { value } }) => handleFilter(value)}
+        value={typeFilter}
+        data-testid="type-select"
+        onChange={handleFilter}
       >
-        <option selected value="">
-          Todas
-        </option>
+        <option value="all">Todas</option>
         <option value="hospedagem">Hospedagem</option>
         <option value="alimentacao">Alimentação</option>
         <option value="bar">Bar</option>
