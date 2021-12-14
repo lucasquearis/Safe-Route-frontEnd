@@ -24,6 +24,8 @@ header {
 }
 
 .title-header {
+  width: 30%;
+  height: 800%;
   color: black;
   text-align: center;
   font-style: oblique;
