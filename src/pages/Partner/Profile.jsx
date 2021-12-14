@@ -10,8 +10,6 @@ const Profile = ({ profileInfos }) => {
     return setIsLoading(false);
   }, [profileInfos]);
 
-  console.log("o post --> p", profileInfos);
-
   const renderProfile = () => {
     const {
       avgRating: {
@@ -56,7 +54,7 @@ const Profile = ({ profileInfos }) => {
             <h2 className="card-title">Avaliações</h2>
           </div>
 
-          <div className="d-flex justify-content-around ">
+          {avgTotal ? <div className="d-flex justify-content-around ">
             <div className="">
               Média das avaliações:
               {
@@ -112,7 +110,7 @@ const Profile = ({ profileInfos }) => {
                 />
               }
             </div>
-          </div>
+          </div> : <p>Loading...</p>}
         </div>
 
         <div className="card-body">
