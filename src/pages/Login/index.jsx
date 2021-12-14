@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Footer from "../../components/Footer";
 import covidSafe from "../../img/covidSafe.png";
 import { loginUser } from "../../services";
 import { Link, useNavigate } from "react-router-dom";
+import "../../style/login.css";
 
 const Login = () => {
   const [emailState, setEmailState] = useState("");
@@ -35,37 +35,39 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Eu sou o Login</h1>
-      <img alt="selo covid Safe" src={covidSafe} />
-      <form>
-        <label htmlFor="email">
-          Email:
-          <input
-            onChange={handleChange}
-            value={emailState}
-            type="email"
-            name="email"
-          ></input>
-        </label>
-        <label htmlFor="password">
-          Senha:
-          <input
-            onChange={handleChange}
-            value={passwordState}
-            name="password"
-            type="password"
-          ></input>
-        </label>
-        <button onClick={authToken}>Entrar</button>
-      </form>
-      <div>
-        <h2>Ainda não possui cadastro?</h2>
-        <h4>
-          Crie sua conta <Link to="/cadastro">aqui</Link>
-        </h4>
+    <div className="d-flex justify-content-center  align-items-center login">
+      <div className="flex-column">
+        <div className="login-img-container">
+          <img className="img-signin" alt="selo covid Safe" src={covidSafe} />
+        </div>
+        <form >
+          <label htmlFor="email">
+            Email:
+            <input
+              onChange={handleChange}
+              value={emailState}
+              type="email"
+              name="email"
+            ></input>
+          </label>
+          <label htmlFor="password">
+            Senha:
+            <input
+              onChange={handleChange}
+              value={passwordState}
+              name="password"
+              type="password"
+            ></input>
+          </label>
+          <button onClick={authToken}>Entrar</button>
+        </form>
+        <div>
+          <h2>Ainda não possui cadastro?</h2>
+          <h4>
+            Crie sua conta <Link to="/cadastro">aqui</Link>
+          </h4>
+        </div>
       </div>
-      <Footer />
     </div>
   );
 };
