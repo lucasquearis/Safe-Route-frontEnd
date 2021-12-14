@@ -40,27 +40,38 @@ const Login = () => {
         <div className="login-img-container">
           <img className="img-signin" alt="selo covid Safe" src={covidSafe} />
         </div>
-        <form >
-          <label htmlFor="email">
-            Email:
+        <form>
+          <div className="form-group">
+            <label htmlFor="email">Endereço de email</label>
             <input
+              className="form-control"
               onChange={handleChange}
               value={emailState}
+              id="email"
               type="email"
               name="email"
+              placeholder="Seu email"
             ></input>
-          </label>
-          <label htmlFor="password">
-            Senha:
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password">Senha:</label>
             <input
+              className="form-control"
               onChange={handleChange}
               value={passwordState}
               name="password"
               type="password"
+              id="password"
+              placeholder="Senha"
             ></input>
-          </label>
-          <button onClick={authToken}>Entrar</button>
+          </div>
+
+          <button className="btn btn-primary" onClick={authToken}>
+            Entrar
+          </button>
         </form>
+
         <div>
           <h2>Ainda não possui cadastro?</h2>
           <h4>
