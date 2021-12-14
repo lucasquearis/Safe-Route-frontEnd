@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Footer from "../../components/Footer";
 import covidSafe from "../../img/covidSafe.png";
 import { loginUser } from "../../services";
 import { Link, useNavigate } from "react-router-dom";
+import "../../style/login.css";
 
 const Login = () => {
   const [emailState, setEmailState] = useState("");
@@ -35,37 +35,53 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Eu sou o Login</h1>
-      <img alt="selo covid Safe" src={covidSafe} />
-      <form>
-        <label htmlFor="email">
-          Email:
-          <input
-            onChange={handleChange}
-            value={emailState}
-            type="email"
-            name="email"
-          ></input>
-        </label>
-        <label htmlFor="password">
-          Senha:
-          <input
-            onChange={handleChange}
-            value={passwordState}
-            name="password"
-            type="password"
-          ></input>
-        </label>
-        <button onClick={authToken}>Entrar</button>
-      </form>
-      <div>
-        <h2>Ainda não possui cadastro?</h2>
-        <h4>
-          Crie sua conta <Link to="/cadastro">aqui</Link>
-        </h4>
+    <div className="d-flex justify-content-center align-items-center login">
+      <div className="">
+        <div className="d-flex justify-content-center login-img-container">
+          <img className="img-login" alt="selo covid Safe" src={covidSafe} />
+        </div>
+        <form>
+          <div className="form-group">
+            <label htmlFor="email" className="login-text">
+              Endereço de email
+            </label>
+            <input
+              className="form-control"
+              onChange={handleChange}
+              value={emailState}
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Seu email"
+            ></input>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password" className="login-text">
+              {" "}
+              Senha:
+            </label>
+            <input
+              className="form-control"
+              onChange={handleChange}
+              value={passwordState}
+              name="password"
+              type="password"
+              id="password"
+              placeholder="Senha"
+            ></input>
+          </div>
+
+          <button className="btn btn-outline-success" onClick={authToken}>
+            Entrar
+          </button>
+        </form>
+
+        <div className="login-text">
+          Ainda não possui cadastro? Crie sua conta{" "}
+          <Link to="/cadastro">aqui!</Link>
+        </div>
       </div>
-      <Footer />
     </div>
   );
 };

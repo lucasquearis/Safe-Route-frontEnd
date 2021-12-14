@@ -43,7 +43,7 @@ header {
 
 /*------------------------ Inicio hero -------------- */
 .hero {
-  background-image: url(./img/background\ hackathon.png);
+  background-image: url(../img//background\ hackathon.png);
   background-position: center;
   background-size: cover;
   height: 60vh;
