@@ -46,7 +46,7 @@ const Profile = ({ profileInfos }) => {
           <h3 className="card-title">Endereço:</h3>
           <div>
             <p className="card-text">
-              {address} - {city}-{state}
+              {address} - {city}-{state}.
             </p>
           </div>
         </div>

@@ -122,7 +122,7 @@ header {
 /*  inicio do partner */
 .partner-img-container {
   width: 100vw;
-  height: 40vh;
+  height: 60vh;
   
 }
 
@@ -139,3 +139,10 @@ header {
   padding: 1%;
 }
 
+/* @media screen and (max-width: 768px) {
+  .rate-container {
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+  }
+} */
