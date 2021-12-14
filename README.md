@@ -8,6 +8,9 @@ Olá bem vindos e bem vindas ao nosso repositório de front-end do grupo 2 do pr
 - [Nossa ideia](#ideia)
 - [Características do Site](#caracteristicas)
   - [Página Ínicial](#home-page)
+  - [Página de Informaçoẽs do Lugar](#partner-page)
+  - [Página de Cadastro de Usuários](#create-account-page)
+- [Técnologias Utilizadas](#tecnologies)
 
 # <a name="introducao"></a> Introdução
 
@@ -55,6 +58,63 @@ Os lugares melhores ranqueados terão destaque em nossa página e futuramente po
 
 # <a name="caracteristicas"></a> Características do Site
 
+Nosso site foi desenvolvido de ponta a ponta, ou seja, tudo o que consumimos no site, foi desenvolvido, manipulado e controlado por nós no back-end.
+
+[Link Repositório Backend](https://github.com/samuel-constantino/hackathon-trybe/tree/dev)
+
 Pensamos em uma palheta de cores bem "clean" para manter o site legível e de fácil entendimento.
 
 ## <a name="home-page"></a> Página inicial
+
+A página ínicial temos um header com a logo da [Trybe](https://www.betrybe.com/), futuramente iremos implementar a logo oficial da **Safe Route**, seguida do nome de nossa marca e um botão para **login**.
+
+No corpo da página temos uma imagem em homenagem ao evento que estamos participando com uma barra de pesquisas que filtra todos os cards de locais por nome, facilitando a busca.
+
+Logo a baixo temos três filtros que auxiliam a busca da barra de pesquisa, ordenando nossos resultados por:
+
+- Cidades
+- Avaliações
+- Categorias
+
+Em seguida, temos a renderização dos cards dos lugares filtrados.
+
+Por fim, temos um rodapé com todas as informações de contato dos integrantes do grupo e tecnologias utilizadas.
+
+## <a name="partner-page"></a> Página de Informações do Lugar
+
+Essa página é acessada ao clicar em um dos cards das empresas cadastradas que são mostradas na página inicial.
+
+Nela temos informações sobre o local, postagens de reclamações, indicações e todo o sitema de notas e ranqueamento do local.
+
+## <a name="login-page"></a> Página de Login
+
+Essa página é acessada ao clicar no botão de login que está no cabeçalho da página inicial.
+
+Nela temos um formulário que necessita de email e senha para realizar o login, temos uma validação de usuários implementada no nosso BackEnd, feito com sucesso o login no site, o usuário ira receber por meio de localStorage um token único que lhe garantirá acesso ao site estando logado por um período.
+
+Toda essa manipulação é feita por meio de autenticação com token JsonWebToken.
+
+## <a name="create-account-page"></a> Página de Login
+
+Caso o usuário não tenha cadastro estando na página de login, clicando no botão "Criar Conta", o usuário é redirecionado para essa página, essa página fica responsavel por cadastrar nosso usuário no banco de dados, garantindo o seu acesso para realizar comentários em lugares, avaliações em geral.
+
+## <a name="tecnologies"></a> Técnologias Útilizadas
+
+Front-end:
+
+- React
+- React Router Dom
+- Context API
+- Bootstrap
+- React Testing Library
+- ESLint
+- Deploy com Heroku
+
+Back-end:
+
+- Express
+- Nodemon
+- Atlas
+- JWT
+- Cloundinary
+- Deploy com Heroku
