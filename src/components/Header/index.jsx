@@ -1,5 +1,6 @@
 import React from "react";
-import imgLogoFake from "../../img/logoTrybe.png";
+// import imgLogoFake from "../../img/logoTrybe.png";
+import covidSafe from "../../img/covidSafe.png";
 import signinIcon from "../../img/user.png";
 import { Link } from "react-router-dom";
 
@@ -8,7 +9,7 @@ const Header = () => {
     <header className="d-flex justify-content-around">
       <div className="d-flex justify-content-around header-container">
         <div className="img-header-container">
-          <img className="img-header" src={imgLogoFake} alt="logo covid Safe" />
+          <img className="img-header" src={covidSafe} alt="logo covid Safe" />
         </div>
 
         <h1 className="align-self-center title-header">Safe Route</h1>
