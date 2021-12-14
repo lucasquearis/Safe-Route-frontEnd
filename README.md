@@ -28,9 +28,9 @@ Caso você queria rodá-la localmente:
 
 # <a name="grupo"></a> Integrantes do Grupo
 
-[Cesar Bhering](https://github.com/cesarbhering)
-[Lucas Santos](https://github.com/lucasquearis)
-[Pedro Lima](https://github.com/lima08)
+[Cesar Bhering](https://github.com/cesarbhering)\
+[Lucas Santos](https://github.com/lucasquearis)\
+[Pedro Lima](https://github.com/lima08)\
 [Samuel Constantino](https://github.com/samuel-constantino)
 
 # <a name="introducao"></a> Introdução
