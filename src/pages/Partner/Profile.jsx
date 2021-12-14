@@ -31,7 +31,7 @@ const Profile = ({ profileInfos }) => {
     const loadingBase = <h1>Loading...</h1>;
     const infosBase = (
       <div className="card mb-3">
-        <div className="partner-img-container">
+        <div className="d-flex align-self-center partner-img-container">
           <img className="partner-img" alt="local" src={picture} />
         </div>
 
@@ -41,7 +41,7 @@ const Profile = ({ profileInfos }) => {
           <div>
             <p className="card-text">
               Endereço:
-              {address} - {city}-{state}.
+              {` ${address}`} - {city}-{state}.
             </p>
           </div>
         </div>
