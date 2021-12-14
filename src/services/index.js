@@ -23,7 +23,6 @@ async function getPartnerById(id) {
 }
 
 async function loginUser(body) {
-
   const config = {
     method: "POST",
     body: JSON.stringify(body),
