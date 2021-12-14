@@ -35,10 +35,10 @@ const Login = () => {
   };
 
   return (
-    <div className="d-flex justify-content-center  align-items-center login">
-      <div className="flex-column">
-        <div className="login-img-container">
-          <img className="img-signin" alt="selo covid Safe" src={covidSafe} />
+    <div className="d-flex justify-content-center align-items-center login">
+      <div className="">
+        <div className="d-flex justify-content-center login-img-container">
+          <img className="img-login" alt="selo covid Safe" src={covidSafe} />
         </div>
         <form>
           <div className="form-group">
