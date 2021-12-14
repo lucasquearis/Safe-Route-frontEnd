@@ -3,9 +3,9 @@ import "../footer.css";
 const Footer = () => {
   return (
     <footer className="card-group">
-      <section className="card cartao text-white mb-">
+      <section className="card cartao text-black mb-">
         <div className="card-body">
-          <h4 className="card-title">Sobre</h4>
+          <h4 className="card-title cartao-titulo">Sobre</h4>
           <p className="card-text">
             Aplicação desenvolvida no Hackathon Trybe de 11/12/2021 a
             13/12/2021.
@@ -18,9 +18,9 @@ const Footer = () => {
         </div>
       </section>
 
-      <section className="card cartao text-white mb-2">
+      <section className="card cartao text-black mb-2">
         <div className="card-body">
-          <h5 className="card-title">Quem Somos</h5>
+          <h5 className="card-title cartao-titulo">Quem Somos</h5>
           <p className="card-text">
             Grupo formado por estudantes da Trybe das turmas 11 e 12.
           </p>
@@ -105,9 +105,9 @@ const Footer = () => {
         </div>
       </section>
 
-      <section className="card cartao text-white mb-2">
+      <section className="card cartao text-black mb-2">
         <div className="card-body">
-          <h5 className="card-title">Tecnologias Utilizadas</h5>
+          <h5 className="card-title cartao-titulo">Tecnologias Utilizadas</h5>
           <div className="cointainer icons-grid ">
             <div className="row tech-row">
               <div className="col-2 ml-auto">
@@ -132,11 +132,14 @@ const Footer = () => {
               </div>
             </div>
             <div className="row tech-row">
-              <div className="col-3 ml-auto">
+              <div className="col-2 ml-auto">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
               </div>
-              <div className="col-3 ml-auto">
+              <div className="col-2 ml-auto">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" />
+              </div>
+              <div className="col-2 ml-auto">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" />
               </div>
             </div>
           </div>
