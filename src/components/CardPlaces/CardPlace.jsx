@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import React from "react";
 import ReactStars from "react-rating-stars-component";
-// import picture from "../../img/cardImg.jpg";
 
 const CardPlace = ({
   place: { picture, title, address, city, state, type, avgRating, _id },
