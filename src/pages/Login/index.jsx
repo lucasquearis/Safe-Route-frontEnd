@@ -42,7 +42,9 @@ const Login = () => {
         </div>
         <form>
           <div className="form-group">
-            <label htmlFor="email">Endereço de email</label>
+            <label htmlFor="email" className="login-text">
+              Endereço de email
+            </label>
             <input
               className="form-control"
               onChange={handleChange}
@@ -55,7 +57,10 @@ const Login = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">Senha:</label>
+            <label htmlFor="password" className="login-text">
+              {" "}
+              Senha:
+            </label>
             <input
               className="form-control"
               onChange={handleChange}
@@ -67,16 +72,14 @@ const Login = () => {
             ></input>
           </div>
 
-          <button className="btn btn-primary" onClick={authToken}>
+          <button className="btn btn-outline-success" onClick={authToken}>
             Entrar
           </button>
         </form>
 
-        <div>
-          <h2>Ainda não possui cadastro?</h2>
-          <h4>
-            Crie sua conta <Link to="/cadastro">aqui</Link>
-          </h4>
+        <div className="login-text">
+          Ainda não possui cadastro? Crie sua conta{" "}
+          <Link to="/cadastro">aqui!</Link>
         </div>
       </div>
     </div>
