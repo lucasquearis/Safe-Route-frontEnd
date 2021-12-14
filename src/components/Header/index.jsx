@@ -1,7 +1,6 @@
 import React from "react";
 import imgLogoFake from "../../img/logoTrybe.png";
 import signinIcon from "../../img/user.png";
-import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -12,7 +11,7 @@ const Header = () => {
           <img className="img-header" src={imgLogoFake} alt="logo covid Safe" />
         </div>
 
-        <SearchBar />
+        <h1 className="align-self-center title-header">Safe Route</h1>
 
         <Link to="/login">
           <button className="btn align-self-center btn-signin">
