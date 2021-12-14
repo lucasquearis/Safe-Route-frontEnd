@@ -13,10 +13,8 @@ const Header = () => {
 
         <h1 className="align-self-center title-header">Safe Route</h1>
 
-        <Link to="/login">
-          <button className="btn align-self-center btn-signin">
-            <img className="img-signin" src={signinIcon} alt="sign in" />
-          </button>
+        <Link className="align-self-center btn-signin" to="/login">
+          <img className="img-signin" src={signinIcon} alt="sign in" />
         </Link>
       </div>
     </header>
