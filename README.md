@@ -6,7 +6,8 @@ Olá bem vindos e bem vindas ao nosso repositório de front-end do grupo 2 do pr
 
 - [Introdução](#introducao)
 - [Nossa ideia](#ideia)
-- [Detalhes da Aplicação](#caracteristicas)
+- [Características do Site](#caracteristicas)
+  - [Página Ínicial](#home-page)
 
 # <a name="introducao"></a> Introdução
 
@@ -52,8 +53,8 @@ O usuário podera procurar e ranquear esses lugares com base em sua localizaçã
 
 Os lugares melhores ranqueados terão destaque em nossa página e futuramente podendo desenvolver parcerias com outras empresas, disponibilizando vantagens para os visitantes e avaliadores.
 
-# <a name="caracteristicas"></a> Características Site
+# <a name="caracteristicas"></a> Características do Site
 
-## Página inicial
+Pensamos em uma palheta de cores bem "clean" para manter o site legível e de fácil entendimento.
 
-A página inicial
+## <a name="home-page"></a> Página inicial
