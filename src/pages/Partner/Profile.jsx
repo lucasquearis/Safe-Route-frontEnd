@@ -38,12 +38,9 @@ const Profile = ({ profileInfos }) => {
         <div className="flex-column justify-content-around card-body">
           <h2 className="card-title">{title}</h2>
           <p className="card-text">{description}</p>
-        </div>
-
-        <div className="flex-column justify-content-around card-body">
-          <h3 className="card-title">Endereço:</h3>
           <div>
             <p className="card-text">
+              Endereço:
               {address} - {city}-{state}.
             </p>
           </div>
@@ -54,63 +51,67 @@ const Profile = ({ profileInfos }) => {
             <h2 className="card-title">Avaliações</h2>
           </div>
 
-          {avgTotal ? <div className="d-flex justify-content-around ">
-            <div className="">
-              Média das avaliações:
-              {
-                <ReactStars
-                  count={5}
-                  size={24}
-                  value={avgTotal}
-                  activeColor="#ffd700"
-                />
-              }
+          {avgTotal ? (
+            <div className="d-flex justify-content-around ">
+              <div className="">
+                Média das avaliações:
+                {
+                  <ReactStars
+                    count={5}
+                    size={24}
+                    value={avgTotal}
+                    activeColor="#ffd700"
+                  />
+                }
+              </div>
+              <div className="">
+                Álcool em Gel Disponível:
+                {
+                  <ReactStars
+                    count={5}
+                    size={24}
+                    value={avgAlcoholAviability}
+                    activeColor="#ffd700"
+                  />
+                }
+              </div>
+              <div className="">
+                Local Limpo:
+                {
+                  <ReactStars
+                    count={5}
+                    size={24}
+                    value={avgCleanliness}
+                    activeColor="#ffd700"
+                  />
+                }
+              </div>
+              <div className="">
+                Distânciamento Social:
+                {
+                  <ReactStars
+                    count={5}
+                    size={24}
+                    value={avgDistancingAviability}
+                    activeColor="#ffd700"
+                  />
+                }
+              </div>
+              <div className="">
+                Uso da Máscara:
+                {
+                  <ReactStars
+                    count={5}
+                    size={24}
+                    value={avgMaskUsage}
+                    activeColor="#ffd700"
+                  />
+                }
+              </div>
             </div>
-            <div className="">
-              Álcool em Gel Disponível:
-              {
-                <ReactStars
-                  count={5}
-                  size={24}
-                  value={avgAlcoholAviability}
-                  activeColor="#ffd700"
-                />
-              }
-            </div>
-            <div className="">
-              Local Limpo:
-              {
-                <ReactStars
-                  count={5}
-                  size={24}
-                  value={avgCleanliness}
-                  activeColor="#ffd700"
-                />
-              }
-            </div>
-            <div className="">
-              Distânciamento Social:
-              {
-                <ReactStars
-                  count={5}
-                  size={24}
-                  value={avgDistancingAviability}
-                  activeColor="#ffd700"
-                />
-              }
-            </div>
-            <div className="">
-              Uso da Máscara:
-              {
-                <ReactStars
-                  count={5}
-                  size={24}
-                  value={avgMaskUsage}
-                  activeColor="#ffd700"
-                />
-              }
-            </div>
-          </div> : <p>Loading...</p>}
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
 
         <div className="card-body">
