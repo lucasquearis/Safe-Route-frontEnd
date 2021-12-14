@@ -117,5 +117,32 @@ header {
 
 .card-body {
   box-sizing: border-box;
-  /* overflow: auto */
 }
+
+/*  inicio do partner */
+.partner-img-container {
+  width: 100vw;
+  height: 60vh;
+  border-radius: 10px;
+}
+
+.partner-img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.rate-container {
+  border-radius: 10px;
+  background-color: rgb(247, 247, 247);
+  padding: 1%;
+  height: 18vh;
+}
+
+/* @media screen and (max-width: 768px) {
+  .rate-container {
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+  }
+} */

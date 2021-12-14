@@ -18,7 +18,6 @@ const CardPlace = ({
           <h6 className="card-title">{title}</h6>
           <div className="d-flex justify-content-around align-items-start">
             <ReactStars
-              className="stars"
               count={5}
               size={24}
               value={avgRating.avgTotal}

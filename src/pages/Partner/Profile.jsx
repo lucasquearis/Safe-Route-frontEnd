@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactStars from "react-rating-stars-component";
 import PropTypes from "prop-types";
 
 const Profile = ({ profileInfos }) => {
@@ -30,41 +31,102 @@ const Profile = ({ profileInfos }) => {
     const loadingBase = <h1>Loading...</h1>;
     const infosBase = (
       <div className="card mb-3">
-        <img className="card-img-top" alt="local" src={picture} />
+        <div className="d-flex align-self-center partner-img-container">
+          <img className="partner-img" alt="local" src={picture} />
+        </div>
 
-        <div className="card-body">
+        <div className="flex-column justify-content-around card-body">
           <h2 className="card-title">{title}</h2>
           <p className="card-text">{description}</p>
+          <div>
+            <p className="card-text">
+              Endereço:
+              {` ${address}`} - {city}-{state}.
+            </p>
+          </div>
         </div>
 
-        <div className="card-body">
-          <h3 className="card-title">Endereço:</h3>
-          <p className="card-text">{address}</p>
-          <p className="card-text">
-            {city}-{state}
-          </p>
-        </div>
+        <div className="rate-container">
+          <div className="d-flex justify-content-around">
+            <h2 className="card-title">Avaliações</h2>
+          </div>
 
-        <div className="card-body">
-          <h2 className="card-title">Avaliações</h2>
-          <p className="card-text">Média das avaliações: {avgTotal}</p>
-          <p className="card-text">
-            Álcool em Gel Disponível: {avgAlcoholAviability}
-          </p>
-          <p className="card-text">Local Limpo: {avgCleanliness}</p>
-          <p className="card-text">
-            Distânciamento Social: {avgDistancingAviability}
-          </p>
-          <p className="card-text">Uso da Máscara: {avgMaskUsage}</p>
+          {avgTotal ? (
+            <div className="d-flex justify-content-around ">
+              <div className="">
+                Média das avaliações:
+                {
+                  <ReactStars
+                    count={5}
+                    size={24}
+                    value={avgTotal}
+                    activeColor="#ffd700"
+                  />
+                }
+              </div>
+              <div className="">
+                Álcool em Gel Disponível:
+                {
+                  <ReactStars
+                    count={5}
+                    size={24}
+                    value={avgAlcoholAviability}
+                    activeColor="#ffd700"
+                  />
+                }
+              </div>
+              <div className="">
+                Local Limpo:
+                {
+                  <ReactStars
+                    count={5}
+                    size={24}
+                    value={avgCleanliness}
+                    activeColor="#ffd700"
+                  />
+                }
+              </div>
+              <div className="">
+                Distânciamento Social:
+                {
+                  <ReactStars
+                    count={5}
+                    size={24}
+                    value={avgDistancingAviability}
+                    activeColor="#ffd700"
+                  />
+                }
+              </div>
+              <div className="">
+                Uso da Máscara:
+                {
+                  <ReactStars
+                    count={5}
+                    size={24}
+                    value={avgMaskUsage}
+                    activeColor="#ffd700"
+                  />
+                }
+              </div>
+            </div>
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
 
         <div className="card-body">
           <h3 className="card-title">Comentários:</h3>
-          {posts.map((post, index) => (
-            <p className="card-text" key={index}>
-              Comentario {index + 1}: {post.comment}
+          {posts && posts.length > 0 ? (
+            posts.map((post, index) => (
+              <p className="card-text" key={index}>
+                Comentário {index + 1}: {post.comment}
+              </p>
+            ))
+          ) : (
+            <p className="card-text">
+              Ainda não há comentários para esse local.
             </p>
-          ))}
+          )}
         </div>
       </div>
     );
