@@ -4,13 +4,34 @@ Olá bem vindos e bem vindas ao nosso repositório de front-end do grupo 2 do pr
 
 ## Sumário
 
+- [Iniciando a Aplicação](#initapp)
 - [Introdução](#introducao)
 - [Nossa ideia](#ideia)
+- [Integrantes do Grupo](#grupo)
 - [Características do Site](#caracteristicas)
-  - [Página Ínicial](#home-page)
-  - [Página de Informaçoẽs do Lugar](#partner-page)
+  - [Página Inicial](#home-page)
+  - [Página de Informações do Lugar](#partner-page)
   - [Página de Cadastro de Usuários](#create-account-page)
-- [Técnologias Utilizadas](#tecnologies)
+- [Tecnologias Utilizadas](#tecnologies)
+
+# <a name="initapp"></a> Iniciando a Aplicação
+
+Nossa aplicação está hospedada no heroku, você pode acessá-la através deste [link](https://grupo2-frontend.herokuapp.com/).
+
+Caso você queria rodá-la localmente:
+
+- Basta executar esse código no seu terminal <code>git clone git@github.com:lucasquearis/Safe-Route-frontEnd.git</code>
+- Abrir a pasta do projeto safe_covid_app
+- Rodar no seu terminal o comando <code>npm start</code>
+- Caso queria rodar os testes <code>npm test</code>
+- Caso queria ver a cobertura de testes <code>npm run coverage</code>
+
+# <a name="grupo"></a> Integrantes do Grupo
+
+[Cesar Bhering](https://github.com/cesarbhering)
+[Lucas Santos](https://github.com/lucasquearis)
+[Pedro Lima](https://github.com/lima08)
+[Samuel Constantino](https://github.com/samuel-constantino)
 
 # <a name="introducao"></a> Introdução
 
@@ -39,18 +60,18 @@ mundo pós-pandemia?  Lembrar que o turismo não é apenas os pontos
 turísticos mais conhecidos e famosos, mas, como fomentar novas opções
 e gerar oportunidades na economia dessas cidades?
 
-# <a name="ideia"></a> Nossa Ídeia
+# <a name="ideia"></a> Nossa Ideia
 
-Com base nesses questionamentos desenvolvemos o **Safe Route** um aplicativo que permite ao usuário qualificar e indicar lugares seguros para visitar e conhecer.
+Com base nesses questionamentos desenvolvemos o **Safe Route** uma aplicação que permite ao usuário qualificar e indicar lugares seguros para visitar e conhecer.
 
 Mas como assim seguro?
 
-Sabemos que nossa atual situaçao, exige que tenhamos segurança de onde ir e quando ir, foi assim que pensamos e desenvolvemos esse site, o úsuario pode ter referências de locais para visitar e somente se preocupar com a parte boa, sair de casa com segurança.
+Sabemos que nossa atual situação, exige que tenhamos segurança de onde ir e quando ir, foi assim que pensamos e desenvolvemos esse site, o usuario pode ter referências de locais para visitar e somente se preocupar com a parte boa, sair de casa com segurança.
 
-O usuário podera procurar e ranquear esses lugares com base em sua localização, qualificando critérios muito importânte para nossa atual situação, sendo elas:
+O usuário poderá procurar e ranquear esses lugares com base em sua localização, qualificando critérios muito importantes, sendo eles:
 
-- Regras de distânciamento social
-- Alcool em gel disponíveis
+- Regras de distanciamento social
+- Álcool em gel disponíveis
 - Limpeza do local
 - Uso de máscaras
 
@@ -66,9 +87,9 @@ Pensamos em uma palheta de cores bem "clean" para manter o site legível e de f�
 
 ## <a name="home-page"></a> Página inicial
 
-A página ínicial temos um header com a logo da [Trybe](https://www.betrybe.com/), futuramente iremos implementar a logo oficial da **Safe Route**, seguida do nome de nossa marca e um botão para **login**.
+A página inicial temos um cabeçalho com nossa logomarca oficial da **Safe Route**, seguida do nome de nossa aplicação e um botão para **login**.
 
-No corpo da página temos uma imagem em homenagem ao evento que estamos participando com uma barra de pesquisas que filtra todos os cards de locais por nome, facilitando a busca.
+No corpo da página temos uma imagem em homenagem ao evento que estamos participando com uma barra de pesquisas que filtra todos os cartões de locais por nome, facilitando a busca.
 
 Logo a baixo temos três filtros que auxiliam a busca da barra de pesquisa, ordenando nossos resultados por:
 
@@ -76,27 +97,27 @@ Logo a baixo temos três filtros que auxiliam a busca da barra de pesquisa, orde
 - Avaliações
 - Categorias
 
-Em seguida, temos a renderização dos cards dos lugares filtrados.
+Em seguida, temos a renderização dos cartões dos lugares filtrados.
 
 Por fim, temos um rodapé com todas as informações de contato dos integrantes do grupo e tecnologias utilizadas.
 
 ## <a name="partner-page"></a> Página de Informações do Lugar
 
-Essa página é acessada ao clicar em um dos cards das empresas cadastradas que são mostradas na página inicial.
+Essa página é acessada ao clicar em um dos cartões das empresas cadastradas que são mostradas na página inicial.
 
-Nela temos informações sobre o local, postagens de reclamações, indicações e todo o sitema de notas e ranqueamento do local.
+Nela temos informações sobre o local, postagens de reclamações, indicações e todo o sistema de notas e ranqueamento do local.
 
 ## <a name="login-page"></a> Página de Login
 
 Essa página é acessada ao clicar no botão de login que está no cabeçalho da página inicial.
 
-Nela temos um formulário que necessita de email e senha para realizar o login, temos uma validação de usuários implementada no nosso BackEnd, feito com sucesso o login no site, o usuário ira receber por meio de localStorage um token único que lhe garantirá acesso ao site estando logado por um período.
+Nela temos um formulário que necessita de e-mail e senha para realizar o login, temos uma validação de usuários implementada no nosso BackEnd, feito com sucesso o login no site, o usuário ira receber por meio de localStorage um token único que lhe garantirá acesso ao site estando logado por um período.
 
 Toda essa manipulação é feita por meio de autenticação com token JsonWebToken.
 
 ## <a name="create-account-page"></a> Página de Login
 
-Caso o usuário não tenha cadastro estando na página de login, clicando no botão "Criar Conta", o usuário é redirecionado para essa página, essa página fica responsavel por cadastrar nosso usuário no banco de dados, garantindo o seu acesso para realizar comentários em lugares, avaliações em geral.
+Caso o usuário não tenha cadastro estando na página de login, clicando no botão "Criar Conta", o usuário é redirecionado para essa página, essa página fica responsável por cadastrar nosso usuário no banco de dados, garantindo o seu acesso para realizar comentários em lugares, avaliações em geral.
 
 ## <a name="tecnologies"></a> Técnologias Útilizadas
 
@@ -112,6 +133,7 @@ Front-end:
 
 Back-end:
 
+- Node.js
 - Express
 - Nodemon
 - Atlas
