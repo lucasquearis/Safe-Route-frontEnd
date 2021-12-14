@@ -1,10 +1,8 @@
 async function getAllPartners() {
-  console.log("Iniciando fetch");
   try {
     const partners = await fetch(
       "https://grupo2-backend.herokuapp.com/partner"
     ).then((result) => result.json());
-    console.log("concluido fetch");
 
     return partners;
   } catch (error) {
@@ -13,12 +11,10 @@ async function getAllPartners() {
 }
 
 async function getPartnerById(id) {
-  console.log("Iniciando fetch");
   try {
     const partners = await fetch(
       `https://grupo2-backend.herokuapp.com/partner/${id}`
     ).then((result) => result.json());
-    console.log("concluido fetch");
 
     return partners;
   } catch (error) {
@@ -27,7 +23,6 @@ async function getPartnerById(id) {
 }
 
 async function loginUser(body) {
-  console.log("Iniciando fetch");
 
   const config = {
     method: "POST",
@@ -41,7 +36,6 @@ async function loginUser(body) {
       "https://grupo2-backend.herokuapp.com/login",
       config
     ).then((result) => result.json());
-    console.log("concluido fetch");
 
     return partners;
   } catch (error) {

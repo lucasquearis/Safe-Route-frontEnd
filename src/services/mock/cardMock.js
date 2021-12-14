@@ -266,7 +266,6 @@ const listMock = [
 ];
 
 async function getAllPartners() {
-  console.log("Iniciando fetch mock");
   try {
     return listMock;
   } catch (error) {
