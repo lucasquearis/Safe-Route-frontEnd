@@ -1,7 +1,20 @@
-function App() {
+import Main from "./pages/Main";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import PlacesProvider from "./context/PlacesProvider";
+import React from "react";
+import "./style/app.css";
+
+const App = () => {
   return (
-    <h1>Hello World</h1>
+    <PlacesProvider>
+      <Header />
+      <Hero />
+      <Main />
+      <Footer />
+    </PlacesProvider>
   );
-}
+};
 
 export default App;
