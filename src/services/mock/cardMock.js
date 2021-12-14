@@ -1,5 +1,4 @@
 const listMock = [
- 
   {
     _id: "61b6582576da8df9de74fbe4",
     title: "Parceiro",

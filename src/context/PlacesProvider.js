@@ -15,7 +15,7 @@ const PlacesProvider = ({ children }) => {
 
   const searchBarFilter = () => {
     return basePlaces.filter((place) =>
-      place.description.toLowerCase().includes(inputsFilter.toLowerCase())
+      place.title.toLowerCase().includes(inputsFilter.toLowerCase())
     );
   };
 
