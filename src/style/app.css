@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-/* ------------------Inicio header -------------------- */
 header {
   margin-top: 20px;
   height: 10vh;
@@ -24,6 +23,8 @@ header {
 }
 
 .title-header {
+  width: 30%;
+  height: 800%;
   color: black;
   text-align: center;
   font-style: oblique;
@@ -41,9 +42,8 @@ header {
   height: 100%;
 }
 
-/*------------------------ Inicio hero -------------- */
 .hero {
-  background-image: url(./img/background\ hackathon.png);
+  background-image: url(../img//background\ hackathon.png);
   background-position: center;
   background-size: cover;
   height: 60vh;
@@ -61,7 +61,7 @@ header {
   box-shadow: 0 13px 30px rgb(0 0 0 / 0.4);
   border-radius: 20px;
 }
-/*------------------------ Inicio filtros -------------- */
+
 .filters {
   justify-content: flex-end;
   padding: 0 10vw;
@@ -73,15 +73,10 @@ header {
   margin: 5px;
 }
 
-/*------------------------ Inicio places -------------- */
 .places {
   justify-content: center;
 }
 
-/* fonte: https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/ 
-  transition: all 0.2s ease-in-out;
-  transform: scale(1.1);
-*/
 .card-place {
   margin: 1rem;
   min-width: 300px;
@@ -119,7 +114,6 @@ header {
   box-sizing: border-box;
 }
 
-/*  inicio do partner */
 .partner-img-container {
   width: 100vw;
   height: 60vh;
@@ -138,11 +132,3 @@ header {
   padding: 1%;
   height: 18vh;
 }
-
-/* @media screen and (max-width: 768px) {
-  .rate-container {
-    display: flex;
-    flex-direction: column;
-    background-color: yellow;
-  }
-} */

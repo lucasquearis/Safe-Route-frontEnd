@@ -1,5 +1,5 @@
 import React from "react";
-import "../footer.css";
+import "../style/footer.css";
 const Footer = () => {
   return (
     <footer className="card-group">
