@@ -1,5 +1,7 @@
 # Projeto 1º Hackathon Trybe - Grupo 2
 
+![Home page Safe Route](/src/img/homePagePrint.png)
+
 Olá bem vindos e bem vindas ao nosso repositório de front-end do grupo 2 do primeiro evento hackathon realizado por pessoas estudantes aqui da [Trybe](https://www.betrybe.com/):rocket:.
 
 ## Sumário
