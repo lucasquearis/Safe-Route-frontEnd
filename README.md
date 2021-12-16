@@ -18,7 +18,7 @@ Olá bem vindos e bem vindas ao nosso repositório de front-end do grupo 2 do pr
 
 # <a name="initapp"></a> Iniciando a Aplicação
 
-Nossa aplicação está hospedada no heroku, você pode acessá-la através deste [link](https://grupo2-frontend.herokuapp.com/).
+Nossa aplicação está hospedada no heroku, você pode acessá-la através deste [link](https://safe-route-project.herokuapp.com/).
 
 Caso você queria rodá-la localmente:
 
